@@ -1,0 +1,1510 @@
+                        OCTOBER TERM, 2012                               99
+
+                                 Syllabus
+
+
+                ALLEYNE v. UNITED STATES
+certiorari to the united states court of appeals for
+                 the fourth circuit
+     No. 11–9335. Argued January 14, 2013—Decided June 17, 2013
+Petitioner Alleyne was charged, as relevant here, with using or carrying
+  a frearm in relation to a crime of violence, 18 U. S. C. § 924(c)(1)(A),
+  which carries a 5-year mandatory minimum sentence, § 924(c)(1)(A)(i),
+  that increases to a 7-year minimum “if the frearm is brandished,”
+  § 924(c)(1)(A)(ii), and to a 10-year minimum “if the frearm is dis-
+  charged,” § 924(c)(1)(A)(iii). In convicting Alleyne, the jury form indi-
+  cated that he had “[u]sed or carried a frearm during and in relation to
+  a crime of violence,” but not that the frearm was “[b]randished.”
+  When the presentence report recommended a 7-year sentence on the
+  § 924(c) count, Alleyne objected, arguing that the verdict form clearly
+  indicated that the jury did not fnd brandishing beyond a reasonable
+  doubt and that raising his mandatory minimum sentence based on a
+  sentencing judge's fnding of brandishing would violate his Sixth
+  Amendment right to a jury trial. The District Court overruled his ob-
+  jection, relying on this Court's holding in Harris v. United States, 536
+  U. S. 545, that judicial factfnding that increases the mandatory mini-
+  mum sentence for a crime is permissible under the Sixth Amendment.
+  The Fourth Circuit affrmed, agreeing that Alleyne's objection was fore-
+  closed by Harris.
+Held: The judgment is vacated, and the case is remanded. Pp. 111–118.
+457 Fed. Appx. 348, vacated and remanded.
+     Justice Thomas delivered the opinion of the Court with respect to
+  Parts I, III–B, III–C, and IV, concluding:
+     1. Because mandatory minimum sentences increase the penalty for a
+  crime, any fact that increases the mandatory minimum is an “element”
+  that must be submitted to the jury. Accordingly, Harris is overruled.
+  Pp. 111–117.
+        (a) Apprendi v. New Jersey, 530 U. S. 466, concluded that any
+  “ `facts that increase the prescribed range of penalties to which a crimi-
+  nal defendant is exposed' ” are elements of the crime, id., at 490, and
+  thus the Sixth Amendment provides defendants with the right to have a
+  jury fnd those facts beyond a reasonable doubt, id., at 484. Apprendi's
+  principle applies with equal force to facts increasing the mandatory min-
+  imum, for a fact triggering a mandatory minimum alters the prescribed
+  range of sentences to which a criminal defendant is exposed. Id., at
+100                ALLEYNE v. UNITED STATES
+
+                                Syllabus
+
+ 490. Because the legally prescribed range is the penalty affxed to the
+ crime, it follows that a fact increasing either end of the range produces
+ a new penalty and constitutes an ingredient of the offense. It is impos-
+ sible to dissociate the foor of a sentencing range from the penalty af-
+ fxed to the crime. The fact that criminal statutes have long specifed
+ both the foor and ceiling of sentence ranges is evidence that both defne
+ the legally prescribed penalty. It is also impossible to dispute that the
+ facts increasing the legally prescribed foor aggravate the punishment,
+ heightening the loss of liberty associated with the crime. Defning facts
+ that increase a mandatory minimum to be part of the substantive of-
+ fense enables the defendant to predict the legally applicable penalty
+ from the face of the indictment, see id., at 478–479, and preserves the
+ jury's historic role as an intermediary between the State and criminal
+ defendants, see United States v. Gaudin, 515 U. S. 506, 510–511. In
+ reaching a contrary conclusion, Harris relied on the fact that the 7-year
+ minimum sentence could have been imposed with or without a judicial
+ fnding of brandishing, because the jury's fnding authorized a sentence
+ of fve years to life, 536 U. S., at 561, but that fact is beside the point.
+ The essential Sixth Amendment inquiry is whether a fact is an element
+ of the crime. Because the fact of brandishing aggravates the legally
+ prescribed range of allowable sentences, it constitutes an element of a
+ separate, aggravated offense that must be found by the jury, regardless
+ of what sentence the defendant might have received had a different
+ range been applicable. There is no basis in principle or logic to distin-
+ guish facts that raise the maximum from those that increase the mini-
+ mum. Pp. 111–116.
+       (b) This ruling does not mean that any fact that infuences judicial
+ discretion must be found by a jury. This Court has long recognized
+ that broad sentencing discretion, informed by judicial factfnding, does
+ not violate the Sixth Amendment. See, e. g., Dillon v. United States,
+ 560 U. S. 817, 828–829. Pp. 116–117.
+    2. Here, the sentencing range supported by the jury's verdict was fve
+ years' imprisonment to life, but the judge, rather than the jury, found
+ brandishing. This increased the penalty to which Alleyne was sub-
+ jected and violated his Sixth Amendment rights. Pp. 117–118.
+    Justice Thomas, joined by Justice Ginsburg, Justice Sotomayor,
+ and Justice Kagan, concluded in Parts II and III–A:
+    1. The Sixth Amendment right to trial “by an impartial jury,” in con-
+ junction with the Due Process Clause, requires that each element of a
+ crime be proved to the jury beyond a reasonable doubt. Gaudin,
+ supra, at 510. Several divided opinions of this Court have addressed
+ the constitutional status of a “sentencing factor.” In McMillan v.
+ Pennsylvania, 477 U. S. 79, 86, the Court held that facts found to in-
+                        Cite as: 570 U. S. 99 (2013)                    101
+
+                                 Syllabus
+
+  crease a mandatory minimum sentence are sentencing factors that a
+  judge could fnd by a preponderance of the evidence. In Apprendi,
+  however, the Court declined to extend McMillan to a New Jersey stat-
+  ute that increased the maximum term of imprisonment if the trial judge
+  found that the crime was committed with racial bias, 530 U. S., at 470,
+  fnding that any fact that increased the prescribed statutory maximum
+  sentence must be an “element” of the offense to be found by the jury,
+  id., at 483, n. 10, 490. Two years later in Harris, the Court declined to
+  apply Apprendi to facts that increased the mandatory minimum sen-
+  tence but not the maximum sentence. 536 U. S., at 557. Pp. 104–107.
+     2. The touchstone for determining whether a fact must be found by a
+  jury beyond a reasonable doubt is whether the fact constitutes an “ele-
+  ment” of the charged offense. United States v. O'Brien, 560 U. S. 218,
+  224. Apprendi's defnition necessarily includes not only facts that in-
+  crease the ceiling, but also those that increase the foor. At common
+  law, the relationship between crime and punishment was clear. A sen-
+  tence was prescribed for each offense, leaving judges with little sentenc-
+  ing discretion. If a fact was by law essential to the penalty, it was an
+  element of the offense. There was a well-established practice of includ-
+  ing in the indictment, and submitting to the jury, every fact that was
+  a basis for imposing or increasing punishment. And this understand-
+  ing was refected in contemporaneous court decisions and treatises.
+  Pp. 107–111.
+     Justice Breyer, agreeing that Harris v. United States, 536 U. S.
+  545, should be overruled, concluded that he continues to disagree with
+  Apprendi v. New Jersey, 530 U. S. 466, because it fails to recognize the
+  law's traditional distinction between elements of a crime and sentencing
+  facts, but fnds it highly anomalous to read Apprendi as insisting that
+  juries fnd sentencing facts that permit a judge to impose a higher sen-
+  tence while not insisting that juries fnd sentencing facts that require a
+  judge to impose a higher sentence. Overruling Harris and applying
+  Apprendi's basic jury-determination rule to mandatory minimum sen-
+  tences would erase that anomaly. Where a maximum sentence is at
+  issue, Apprendi means that a judge who wishes to impose a higher sen-
+  tence cannot do so unless a jury fnds the requisite statutory factual
+  predicate. Where a mandatory minimum sentence is at issue, Ap-
+  prendi would mean that the government cannot force a judge who does
+  not wish to impose a higher sentence to do so unless a jury fnds the
+  requisite statutory factual predicate. Pp. 122–124.
+
+  Thomas, J., announced the judgment of the Court and delivered the
+opinion of the Court with respect to Parts I, III–B, III–C, and IV, in which
+Ginsburg, Breyer, Sotomayor, and Kagan, JJ., joined, and an opinion
+102                 ALLEYNE v. UNITED STATES
+
+                           Opinion of the Court
+
+with respect to Parts II and III–A, in which Ginsburg, Sotomayor, and
+Kagan, JJ., joined. Sotomayor, J., fled a concurring opinion, in which
+Ginsburg and Kagan, JJ., joined, post, p. 118. Breyer, J., fled an
+opinion concurring in part and concurring in the judgment, post, p. 122.
+Roberts, C. J., fled a dissenting opinion, in which Scalia and Ken-
+nedy, JJ., joined, post, p. 124. Alito, J., fled a dissenting opinion, post,
+p. 132.
+
+  Mary E. Maguire argued the cause for petitioner. With
+her on the briefs were Patrick L. Bryant, Frances H. Pratt,
+and Michael S. Nachmanoff.
+  Deputy Solicitor General Dreeben argued the cause for
+the United States. With him on the brief were Solicitor
+General Verrilli, Assistant Attorney General Breuer, and
+Eric J. Feigin.*
+
+   Justice Thomas announced the judgment of the Court
+and delivered the opinion of the Court with respect to Parts
+I, III–B, III–C, and IV, and an opinion with respect to Parts
+
+   *Briefs of amici curiae urging reversal were fled for the Center on the
+Administration of Criminal Law by Anthony S. Barkow, Rachel E. Bar-
+kow, Samuel L. Feder, and Matthew S. Hellman; for Families Against
+Mandatory Minimums by Gregory G. Rapawy, Mary Price, and Peter
+Goldberger; for the National Association of Criminal Defense Lawyers
+et al. by John B. Owens, Daniel B. Levin, Jonathan D. Hacker, and Sarah
+S. Gannett; for the New York Council of Defense Lawyers by Marc L.
+Greenwald, Douglas A. Berman, and Alexandra A. E. Shapiro; and for
+the Sentencing Project et al. by Alison Siegler, Steven R. Shapiro, and
+Ezekiel R. Edwards.
+   A brief of amici curiae urging affrmance was fled for the State of
+Texas et al. by Greg Abbott, Attorney General of Texas, Jonathan F.
+Mitchell, Solicitor General, and Daniel T. Hodge, First Assistant Attorney
+General, and by the Attorneys General for their respective States as fol-
+lows: Luther Strange of Alabama, Tom Horne of Arizona, John W. Suthers
+of Colorado, Joseph R. Biden III of Delaware, Sam Olens of Georgia,
+David M. Louie of Hawaii, Derek Schmidt of Kansas, William J. Schnei-
+der of Maine, Bill Schuette of Michigan, Chris Koster of Missouri, Jeffrey
+S. Chiesa of New Jersey, Gary K. King of New Mexico, Wayne Stenehjem
+of North Dakota, and Robert M. McKenna of Washington.
+                   Cite as: 570 U. S. 99 (2013)             103
+
+                      Opinion of the Court
+
+II and III–A, in which Justice Ginsburg, Justice Soto-
+mayor, and Justice Kagan join.
+   In Harris v. United States, 536 U. S. 545 (2002), this Court
+held that judicial factfnding that increases the mandatory
+minimum sentence for a crime is permissible under the Sixth
+Amendment. We granted certiorari to consider whether
+that decision should be overruled. 568 U. S. 936 (2012).
+   Harris drew a distinction between facts that increase the
+statutory maximum and facts that increase only the manda-
+tory minimum. We conclude that this distinction is incon-
+sistent with our decision in Apprendi v. New Jersey, 530 U. S.
+466 (2000), and with the original meaning of the Sixth
+Amendment. Any fact that, by law, increases the penalty
+for a crime is an “element” that must be submitted to the
+jury and found beyond a reasonable doubt. See id., at 483,
+n. 10, 490. Mandatory minimum sentences increase the pen-
+alty for a crime. It follows, then, that any fact that in-
+creases the mandatory minimum is an “element” that must
+be submitted to the jury. Accordingly, Harris is overruled.
+
+                                I
+   Petitioner Allen Ryan Alleyne and an accomplice devised
+a plan to rob a store manager as he drove the store's daily
+deposits to a local bank. By feigning car trouble, they
+tricked the manager to stop. Alleyne's accomplice ap-
+proached the manager with a gun and demanded the store's
+deposits, which the manager surrendered. Alleyne was
+later charged with multiple federal offenses, including rob-
+bery affecting interstate commerce, 18 U. S. C. § 1951(a), and
+using or carrying a frearm in relation to a crime of violence,
+§ 924(c)(1)(A). Section 924(c)(1)(A) provides, in relevant
+part, that anyone who “uses or carries a frearm” in relation
+to a “crime of violence” shall:
+        “(i) be sentenced to a term of imprisonment of not
+     less than 5 years;
+104              ALLEYNE v. UNITED STATES
+
+                      Opinion of Thomas, J.
+
+        “(ii) if the frearm is brandished, be sentenced to a
+      term of imprisonment of not less than 7 years; and
+        “(iii) if the frearm is discharged, be sentenced to a
+      term of imprisonment of not less than 10 years.”
+The jury convicted Alleyne. The jury indicated on the ver-
+dict form that Alleyne had “[u]sed or carried a frearm during
+and in relation to a crime of violence,” but did not indicate a
+fnding that the frearm was “[b]randished.” App. 40.
+   The presentence report recommended a 7-year sentence on
+the § 924(c) count, which refected the mandatory minimum
+sentence for cases in which a frearm has been “brandished,”
+§ 924(c)(1)(A)(ii). Alleyne objected to this recommendation.
+He argued that it was clear from the verdict form that the
+jury did not fnd brandishing beyond a reasonable doubt and
+that he was subject only to the 5-year minimum for “us[ing]
+or carr[ying] a frearm.” Alleyne contended that raising his
+mandatory minimum sentence based on a sentencing judge's
+fnding that he brandished a frearm would violate his Sixth
+Amendment right to a jury trial.
+   The District Court overruled Alleyne's objection. It ex-
+plained that, under Harris, brandishing was a sentencing
+factor that the court could fnd by a preponderance of evi-
+dence without running afoul of the Constitution. It found
+that the evidence supported a fnding of brandishing, and
+sentenced Alleyne to seven years' imprisonment on the
+§ 924(c) count. The Court of Appeals affrmed, likewise not-
+ing that Alleyne's objection was foreclosed by Harris. 457
+Fed. Appx. 348 (CA4 2011) (per curiam).
+                               II
+  The Sixth Amendment provides that those “accused” of a
+“crime” have the right to a trial “by an impartial jury.”
+This right, in conjunction with the Due Process Clause, re-
+quires that each element of a crime be proved to the jury
+beyond a reasonable doubt. United States v. Gaudin, 515
+U. S. 506, 510 (1995); In re Winship, 397 U. S. 358, 364 (1970).
+The substance and scope of this right depend upon the
+                    Cite as: 570 U. S. 99 (2013)             105
+
+                      Opinion of Thomas, J.
+
+proper designation of the facts that are elements of the
+crime.
+                           A
+   The question of how to defne a “crime”—and, thus, how
+to determine what facts must be submitted to the jury—has
+generated a number of divided opinions from this Court.
+The principal source of disagreement is the constitutional
+status of a special sort of fact known as a “sentencing factor.”
+This term was frst used in McMillan v. Pennsylvania, 477
+U. S. 79, 86 (1986), to refer to facts that are not found by a
+jury but that can still increase the defendant's punishment.
+Following McMillan's introduction of this term, this Court
+has made a number of efforts to delimit its boundaries.
+   McMillan initially invoked the distinction between “ele-
+ments” and “sentencing factors” to reject a constitutional
+challenge to Pennsylvania's Mandatory Minimum Sentencing
+Act, 42 Pa. Cons. Stat. § 9712 (1982). That law provided that
+anyone convicted of certain felonies would be subject to a
+mandatory minimum sentence if the judge found, by a pre-
+ponderance of evidence, that the person “ `visibly possessed
+a frearm' ” in the course of committing specifed crimes.
+477 U. S., at 81, n. 1. While the Court acknowledged that
+there were constitutional limits to the State's ability to “de-
+fn[e] crimes and prescrib[e] penalties,” it found that the
+Commonwealth had permissibly defned visible possession as
+a sentencing factor, rather than an element. Id., at 86. In
+the Court's view, this allowed the judge, rather than the jury,
+to fnd this fact by a preponderance of evidence without vio-
+lating the Constitution.
+   McMillan did not address whether legislatures' freedom
+to defne facts as sentencing factors extended to fndings that
+increased the maximum term of imprisonment for an of-
+fense. We foreshadowed an answer to this question in Jones
+v. United States, 526 U. S. 227, 243, n. 6 (1999), but did not
+resolve the issue until Apprendi. There, we identifed a
+concrete limit on the types of facts that legislatures may des-
+ignate as sentencing factors.
+106             ALLEYNE v. UNITED STATES
+
+                     Opinion of Thomas, J.
+
+  In Apprendi, the defendant was sentenced to 12 years' im-
+prisonment under a New Jersey statute that increased the
+maximum term of imprisonment from 10 years to 20 years if
+the trial judge found that the defendant committed his crime
+with racial bias. 530 U. S., at 470. In defending its sen-
+tencing scheme, the State of New Jersey argued that, under
+McMillan, the legislature could defne racial bias as a sen-
+tencing factor to be found by the judge. We declined to ex-
+tend McMillan that far. We explained that there was no
+“principled basis for treating” a fact increasing the maximum
+term of imprisonment differently from the facts constituting
+the base offense. 530 U. S., at 476. The historic link be-
+tween crime and punishment, instead, led us to conclude that
+any fact that increased the prescribed statutory maximum
+sentence must be an “element” of the offense to be found
+by the jury. Id., at 483, n. 10, 490. We, thus, found that
+Apprendi's sentence had been unconstitutionally enhanced
+by the judge's fnding of racial bias by a preponderance of
+evidence. Id., at 491–492.
+                               B
+   While Apprendi only concerned a judicial fnding that in-
+creased the statutory maximum, the logic of Apprendi
+prompted questions about the continuing vitality, if not va-
+lidity, of McMillan's holding that facts found to increase the
+mandatory minimum sentence are sentencing factors and not
+elements of the crime. We responded two years later in
+Harris v. United States, 536 U. S. 545, where we considered
+the same statutory provision and the same question before
+us today.
+   In Harris, the defendant was charged, under § 924(c)
+(1)(A), with carrying a frearm in the course of committing a
+drug traffcking crime. The mandatory minimum sentence
+based on the jury's verdict alone was fve years, but the Dis-
+trict Court imposed a 7-year mandatory minimum sentence
+based on its fnding, by a preponderance of evidence, that
+the defendant also brandished the frearm. As in this case,
+                    Cite as: 570 U. S. 99 (2013)              107
+
+                      Opinion of Thomas, J.
+
+Harris challenged his sentence on the ground that the 7-year
+mandatory minimum sentence was unconstitutional under
+Apprendi, even though the judge's fnding did not alter the
+maximum sentence to which he was exposed. Har r is,
+supra, at 551.
+   The Court declined to apply Apprendi to facts that in-
+creased the mandatory minimum sentence but not the maxi-
+mum sentence. 536 U. S., at 557 (plurality opinion); id., at
+570 (Breyer, J., concurring in part and concurring in judg-
+ment). In the plurality's view, judicial factfnding that in-
+creased the mandatory minimum did not implicate the Sixth
+Amendment. Because the jury's verdict “authorized the
+judge to impose the minimum with or without the fnding,”
+id., at 557, the plurality was of the view that the factual basis
+for increasing the minimum sentence was not “ `essential' ”
+to the defendant's punishment, id., at 560–561. Instead, it
+merely limited the judge's “choices within the authorized
+range.” Id., at 567. From this, the plurality drew a dis-
+tinction between “facts increasing the defendant's minimum
+sentence and facts extending the sentence beyond the statu-
+tory maximum,” id., at 566. The Court limited Apprendi's
+holding to instances where the factual fnding increases the
+statutory maximum sentence.
+
+                                III
+  Alleyne contends that Harris was wrongly decided and
+that it cannot be reconciled with our reasoning in Apprendi.
+We agree.
+                              A
+   The touchstone for determining whether a fact must be
+found by a jury beyond a reasonable doubt is whether the
+fact constitutes an “element” or “ingredient” of the charged
+offense. United States v. O'Brien, 560 U. S. 218, 224 (2010);
+Apprendi, supra, at 483, n. 10; J. Archbold, Pleading and Evi-
+dence in Criminal Cases 52 (5th Am. ed. 1846) (hereinafter
+Archbold). In Apprendi, we held that a fact is by defnition
+108             ALLEYNE v. UNITED STATES
+
+                      Opinion of Thomas, J.
+
+an element of the offense and must be submitted to the jury
+if it increases the punishment above what is otherwise le-
+gally prescribed. 530 U. S., at 483, n. 10. While Harris de-
+clined to extend this principle to facts increasing mandatory
+minimum sentences, Apprendi's defnition of “elements” nec-
+essarily includes not only facts that increase the ceiling, but
+also those that increase the foor. Both kinds of facts alter
+the prescribed range of sentences to which a defendant is
+exposed and do so in a manner that aggravates the pun-
+ishment. 530 U. S., at 483, n. 10; Harris, supra, at 579
+(Thomas, J., dissenting). Facts that increase the mandatory
+minimum sentence are therefore elements and must be sub-
+mitted to the jury and found beyond a reasonable doubt.
+
+                               1
+   At common law, the relationship between crime and pun-
+ishment was clear. As discussed in Apprendi, “[t]he sub-
+stantive criminal law tended to be sanction-specifc,” mean-
+ing “it prescribed a particular sentence for each offense.”
+Langbein, The English Criminal Trial Jury on the Eve of the
+French Revolution, in The Trial Jury in England, France,
+Germany 1700–1900, p. 36 (A. Schioppa ed. 1987) (quoted in
+Apprendi, supra, at 479). The system left judges with little
+sentencing discretion: Once the facts of the offense were de-
+termined by the jury, the “judge was meant simply to impose
+[the prescribed] sentence.” Langbein, supra, at 36–37; see
+also 3 W. Blackstone, Commentaries on the Laws of England
+396 (1768) (“The judgment, though pronounced or awarded
+by the judges, is not their determination or sentence, but the
+determination and sentence of the law” (emphasis deleted)).
+This Court has recognized that the same was true, in many
+instances, early on in this country. United States v. Gray-
+son, 438 U. S. 41, 45 (1978); see, e. g., Commonwealth v.
+Smith, 1 Mass. 245 (1804) (describing state law that specifed
+a punishment for larceny of damages three times the value
+of the stolen goods). While some early American statutes
+                   Cite as: 570 U. S. 99 (2013)             109
+
+                      Opinion of Thomas, J.
+
+provided ranges of permissible sentences, K. Stith & J. Ca-
+branes, Fear of Judging: Sentencing Guidelines in the Fed-
+eral Courts 9 (1998), the ranges themselves were linked
+to particular facts constituting the elements of the crime,
+e. g., Lacy v. State, 15 Wis. 13 (1862) (discussing arson stat-
+ute that provided for a sentence of 7 to 14 years where the
+house was occupied at the time of the offense, but a sentence
+of 3 to 10 if it was not); Ga. Penal Code §§ 4324–4325 (1867)
+(robbery “by open force or violence” was punishable by 4 to
+20 years' imprisonment, while “[r]obbery by intimidation, or
+without using force and violence,” was punishable by 2 to 5
+years' imprisonment). This linkage of facts with particular
+sentence ranges (defned by both the minimum and the maxi-
+mum) refects the intimate connection between crime and
+punishment.
+   Consistent with this connection between crime and punish-
+ment, various treatises defned “crime” as consisting of every
+fact which “is in law essential to the punishment sought to
+be inficted,” 1 J. Bishop, Criminal Procedure 50 (2d ed. 1872)
+(hereinafter Bishop), or the whole of the wrong “to which
+the law affxes . . . punishment,” id., § 80, at 51. See also 1
+J. Bishop, New Criminal Procedure § 84, p. 49 (4th ed. 1895)
+(defning crime as “that wrongful aggregation [of elements]
+out of which the punishment proceeds”); Archbold 128 (de-
+fning crime to include any fact that “annexes a higher de-
+gree of punishment”). Numerous high courts agreed that
+this formulation “accurately captured the common-law un-
+derstanding of what facts are elements of a crime.” Ap-
+prendi, 530 U. S., at 511–512 (Thomas, J., concurring) (col-
+lecting cases). If a fact was by law essential to the penalty,
+it was an element of the offense.
+
+                                2
+  From these widely recognized principles followed a well-
+established practice of including in the indictment, and sub-
+mitting to the jury, every fact that was a basis for imposing
+110              ALLEYNE v. UNITED STATES
+
+                       Opinion of Thomas, J.
+
+or increasing punishment. While an exhaustive history
+need not be recounted here, see id., at 501–509 (Thomas, J.,
+concurring) (detailing practices of American courts from the
+1840's onward), a few particularly salient examples illustrate
+the point. In Hope v. Commonwealth, 50 Mass. 134 (1845),
+the defendant was indicted for (and convicted of) larceny.
+The larceny statute established two levels of sentencing
+based on whether the value of the stolen property exceeded
+$100. Because punishment varied with value, the state high
+court found that value was an element of the offense:
+      “Our statutes, it will be remembered, prescribe the pun-
+      ishment for larceny, with reference to the value of the
+      property stolen; and for this reason, as well as because
+      it is in conformity with long established practice, the
+      court are of [the] opinion that the value of the property
+      alleged to be stolen must be set forth in the indictment.”
+      Id., at 137.
+Numerous other contemporaneous court decisions reflect
+this same understanding. See, e. g., Ritchey v. State, 7
+Blackf. 168, 169 (Ind. 1844) (holding that indictment for arson
+must allege value of property destroyed, because statute set
+punishment based on value); United States v. Fisher, 25 F.
+Cas. 1086 (No. 15,102) (CC Ohio 1849) (McLean, J.) (“A car-
+rier of the mail is subject to a higher penalty where he steals
+a letter out of the mail, which contains an article of value.
+And when this offense is committed, the indictment must
+allege the letter contained an article of value, which aggra-
+vates the offense and incurs a higher penalty”).
+   A number of contemporaneous treatises similarly took the
+view that a fact that increased punishment must be charged
+in the indictment. As one 19th-century commentator
+explained:
+      “Where a statute annexes a higher degree of punish-
+      ment to a common-law felony, if committed under partic-
+      ular circumstances, an indictment for the offence, in
+                        Cite as: 570 U. S. 99 (2013)                     111
+
+                           Opinion of the Court
+
+     order to bring the defendant within that higher degree
+     of punishment, must expressly charge it to have been
+     committed under those circumstances, and must state
+     the circumstances with certainty and precision. [2 M.
+     Hale, Pleas of the Crown *170].” Archbold 51 (15th
+     ed. 1862).
+Another explained that “the indictment must contain an alle-
+gation of every fact which is legally essential to the punish-
+ment to be inficted.” Bishop § 81, at 51. This rule “en-
+abled [the defendant] to determine the species of offence”
+with which he was charged “in order that he may prepare
+his defence accordingly . . . and that there may be no doubt
+as to the judgment which should be given, if the defendant
+be convicted. ” Archbold 44 (emphasis added). As the
+Court noted in Apprendi, “[t]he defendant's ability to predict
+with certainty the judgment from the face of the felony in-
+dictment fowed from the invariable linkage of punishment
+with crime.” 530 U. S., at 478.
+
+                                     B
+  Consistent with common-law and early American practice,
+Apprendi concluded that any “facts that increase the pre-
+scribed range of penalties to which a criminal defendant is
+exposed” are elements of the crime. Id., at 490 (internal
+quotation marks omitted); id., at 483, n. 10 (“[F]acts that
+expose a defendant to a punishment greater than that other-
+wise legally prescribed were by defnition `elements' of a sep-
+arate legal offense”).1 We held that the Sixth Amendment
+provides defendants with the right to have a jury fnd those
+facts beyond a reasonable doubt. Id., at 484. While Harris
+limited Apprendi to facts increasing the statutory maximum,
+   1
+     In Almendarez-Torres v. United States, 523 U. S. 224 (1998), we recog-
+nized a narrow exception to this general rule for the fact of a prior convic-
+tion. Because the parties do not contest that decision's vitality, we do not
+revisit it for purposes of our decision today.
+112             ALLEYNE v. UNITED STATES
+
+                      Opinion of the Court
+
+the principle applied in Apprendi applies with equal force to
+facts increasing the mandatory minimum.
+   It is indisputable that a fact triggering a mandatory mini-
+mum alters the prescribed range of sentences to which a
+criminal defendant is exposed. Apprendi, supra, at 490;
+Harris, 536 U. S., at 575, 582 (Thomas, J., dissenting). But
+for a fnding of brandishing, the penalty is fve years to life
+in prison; with a fnding of brandishing, the penalty becomes
+seven years to life. Just as the maximum of life marks the
+outer boundary of the range, so seven years marks its foor.
+And because the legally prescribed range is the penalty af-
+fxed to the crime, infra this page, it follows that a fact in-
+creasing either end of the range produces a new penalty and
+constitutes an ingredient of the offense. Apprendi, supra,
+at 501 (Thomas, J., concurring); see also Bishop § 598, at 360–
+361 (if “a statute prescribes a particular punishment to be
+inficted on those who commit it under special circumstances
+which it mentions, or with particular aggravations,” then
+those special circumstances must be specifed in the indict-
+ment (emphasis added)); 1 F. Wharton, Criminal Law § 371,
+p. 291 (rev. 7th ed. 1874) (similar).
+   It is impossible to dissociate the foor of a sentencing range
+from the penalty affxed to the crime. See Harris, supra,
+at 569 (opinion of Breyer, J.) (facts increasing the minimum
+and facts increasing the maximum cannot be distinguished
+“in terms of logic”). Indeed, criminal statutes have long
+specifed both the foor and ceiling of sentence ranges, which
+is evidence that both defne the legally prescribed penalty.
+See, e. g., supra, at 108–109; N. Y. Penal Code §§ 231–232,
+p. 70 (1882) (punishment for frst-degree robbery was 10 to
+20 years' imprisonment; second-degree robbery was 5 to 15
+years); Va. Code ch. 192, §§ 1–2, p. 787 (2d ed. 1860) (arson
+committed at night was punishable by 5 to 10 years; arson
+committed during the day was 3 to 10 years). This histori-
+cal practice allowed those who violated the law to know, ex
+ante, the contours of the penalty that the legislature affxed
+                       Cite as: 570 U. S. 99 (2013)                   113
+
+                          Opinion of the Court
+
+to the crime—and comports with the obvious truth that the
+foor of a mandatory range is as relevant to wrongdoers as
+the ceiling. A fact that increases a sentencing foor, thus,
+forms an essential ingredient of the offense.
+   Moreover, it is impossible to dispute that facts increasing
+the legally prescribed foor aggravate the punishment. Har-
+ris, supra, at 579 (Thomas, J., dissenting); O'Brien, 560 U. S.,
+at 240–241 (Thomas, J., concurring in judgment). Elevating
+the low end of a sentencing range heightens the loss of lib-
+erty associated with the crime: The defendant's “expected
+punishment has increased as a result of the narrowed range”
+and “the prosecution is empowered, by invoking the manda-
+tory minimum, to require the judge to impose a higher pun-
+ishment than he might wish.” Apprendi, supra, at 522
+(Thomas, J., concurring). Why else would Congress link an
+increased mandatory minimum to a particular aggravating
+fact other than to heighten the consequences for that behav-
+ior? See McMillan, 477 U. S., at 88, 89 (twice noting that a
+mandatory minimum “ `ups the ante' ” for a criminal defend-
+ant); Harris, supra, at 580 (Thomas, J., dissenting). This
+reality demonstrates that the core crime and the fact trig-
+gering the mandatory minimum sentence together constitute
+a new, aggravated crime, each element of which must be sub-
+mitted to the jury.2
+   Defning facts that increase a mandatory statutory mini-
+mum to be part of the substantive offense enables the de-
+fendant to predict the legally applicable penalty from the
+  2
+   Juries must fnd any facts that increase either the statutory maximum
+or minimum because the Sixth Amendment applies where a fnding of fact
+both alters the legally prescribed range and does so in a way that aggra-
+vates the penalty. Importantly, this is distinct from factfnding used to
+guide judicial discretion in selecting a punishment “within limits fxed by
+law.” Williams v. New York, 337 U. S. 241, 246 (1949). While such fnd-
+ings of fact may lead judges to select sentences that are more severe than
+the ones they would have selected without those facts, the Sixth Amend-
+ment does not govern that element of sentencing. Infra, at 116–117,
+and n. 6.
+114                ALLEYNE v. UNITED STATES
+
+                          Opinion of the Court
+
+face of the indictment. See Apprendi, 530 U. S., at 478–479.
+It also preserves the historic role of the jury as an intermedi-
+ary between the State and criminal defendants. See United
+States v. Gaudin, 515 U. S., at 510–511 (“This right was de-
+signed `to guard against a spirit of oppression and tyranny
+on the part of rulers,' and `was from very early times insisted
+on by our ancestors in the parent country, as the great bul-
+wark of their civil and political liberties' ” (quoting 2 J. Story,
+Commentaries on the Constitution of the United States
+§§ 1779, 1780, pp. 540–541 (4th ed. 1873))); Williams v. Flor-
+ida, 399 U. S. 78, 100 (1970) (“[T]he essential feature of a jury
+obviously lies in [its] interposition between the accused and
+his accuser”); Duncan v. Louisiana, 391 U. S. 145, 155 (1968)
+(“A right to jury trial is granted to criminal defendants in
+order to prevent oppression by the Government”).
+   In adopting a contrary conclusion, Harris relied on the
+fact that the 7-year minimum sentence could have been im-
+posed with or without a judicial fnding of brandishing, be-
+cause the jury's fnding already authorized a sentence of fve
+years to life. 536 U. S., at 561. The dissent repeats this
+argument today. See post, at 128 (opinion of Roberts, C. J.)
+(“The jury's verdict authorized the judge to impose the pre-
+cise sentence he imposed for the precise factual reason he
+imposed it”). While undoubtedly true, this fact is beside
+the point.3
+   As noted, the essential Sixth Amendment inquiry is
+whether a fact is an element of the crime. When a fnding
+of fact alters the legally prescribed punishment so as to ag-
+gravate it, the fact necessarily forms a constituent part of a
+
+  3
+    Apprendi v. United States, 530 U. S. 466 (2000), rejected an argument
+similar to the one advanced in Harris. In Apprendi, the State of New
+Jersey argued that increasing the defendant's statutory maximum on the
+challenged count did not violate the Sixth Amendment because “the judge
+could have imposed consecutive sentences,” in conjunction with other
+counts, to produce the sentence that the defendant actually received on
+the count at issue. 530 U. S., at 474. We found that this possibility did
+not preclude a Sixth Amendment violation. Ibid.
+                        Cite as: 570 U. S. 99 (2013)                     115
+
+                           Opinion of the Court
+
+new offense and must be submitted to the jury. It is no
+answer to say that the defendant could have received the
+same sentence with or without that fact. It is obvious, for
+example, that a defendant could not be convicted and sen-
+tenced for assault, if the jury only fnds the facts for larceny,
+even if the punishments prescribed for each crime are identi-
+cal. One reason is that each crime has different elements
+and a defendant can be convicted only if the jury has found
+each element of the crime of conviction.
+  Similarly, because the fact of brandishing aggravates the
+legally prescribed range of allowable sentences, it constitutes
+an element of a separate, aggravated offense that must be
+found by the jury, regardless of what sentence the defendant
+might have received if a different range had been applicable.
+Indeed, if a judge were to fnd a fact that increased the statu-
+tory maximum sentence, such a fnding would violate the
+Sixth Amendment, even if the defendant ultimately received
+a sentence falling within the original sentencing range (i. e.,
+the range applicable without that aggravating fact). Cf.
+Hobbs v. State, 44 Tex. 353 (1875) (reversing conviction
+where the defendant was indicted for a crime punishable by
+2 to 5 years and sentenced to 3 years because the trial court
+improperly instructed the jury to sentence the defendant be-
+tween 2 to 10 years if it found a particular aggravating fact);
+State v. Callahan, 109 La. 946, 33 So. 931 (1903) (fnding ex
+post facto violation where a newly enacted law increased the
+range of punishment, even though defendant was sentenced
+within the range established by the prior law).4 The essen-
+  4
+    Many criminal statutes allow for this possibility. For example, an Illi-
+nois law provides for a sentence of 2 to 10 years' imprisonment for intimi-
+dation, Ill. Comp. Stat., ch. 720, § 5/12–6(b) (West 2010), and 3 to 14 years
+for aggravated intimidation, § 5/12–6.2(b). The elements of aggravated
+intimidation include all the elements of intimidation plus one enumerated
+aggravating fact. Under this statute, if a jury found each element of in-
+timidation, but the judge purported to fnd a fact that elevated the offense
+to aggravated intimidation, the Sixth Amendment would most certainly
+be violated, even if the defendant received a sentence that fell within both
+ranges. See also La. Rev. Stat. Ann. §§ 14:51, 14:52 (West 2007) (sentenc-
+116                 ALLEYNE v. UNITED STATES
+
+                           Opinion of the Court
+
+tial point is that the aggravating fact produced a higher
+range, which, in turn, conclusively indicates that the fact is
+an element of a distinct and aggravated crime. It must,
+therefore, be submitted to the jury and found beyond a rea-
+sonable doubt.
+   Because there is no basis in principle or logic to distinguish
+facts that raise the maximum from those that increase the
+minimum, Harris was inconsistent with Apprendi. It is, ac-
+cordingly, overruled.5
+                               C
+   In holding that facts that increase mandatory minimum
+sentences must be submitted to the jury, we take care to note
+what our holding does not entail. Our ruling today does not
+mean that any fact that infuences judicial discretion must
+be found by a jury. We have long recognized that broad
+sentencing discretion, informed by judicial factfnding, does
+not violate the Sixth Amendment. See, e. g., Dillon v.
+United States, 560 U. S. 817, 828–829 (2010) (“[W]ithin estab-
+lished limits[,] . . . the exercise of [sentencing] discretion does
+not contravene the Sixth Amendment even if it is informed
+by judge-found facts” (emphasis deleted; internal quotation
+marks omitted)); Apprendi, supra, at 481 (“[N]othing in
+this history suggests that it is impermissible for judges to
+exercise discretion—taking into consideration various fac-
+tors relating both to offense and offender—in imposing a
+judgment within the range prescribed by statute”).6 This
+ing range for simple arson is 2 to 15 years; sentencing range for aggra-
+vated arson is 6 to 20 years); Mont. Code Ann. §§ 45–5–302(2), 45–5–303(2)
+(2011) (sentencing range for kidnaping is 2 to 10 years, but 2 to life for
+aggravated kidnaping).
+  5
+    The force of stare decisis is at its nadir in cases concerning procedural
+rules that implicate fundamental constitutional protections. Because
+Harris is irreconcilable with the reasoning of Apprendi and the original
+meaning of the Sixth Amendment, we follow the latter.
+  6
+    See also United States v. Tucker, 404 U. S. 443, 446 (1972) ( judges may
+exercise sentencing discretion through “an inquiry broad in scope, largely
+                       Cite as: 570 U. S. 99 (2013)                   117
+
+                          Opinion of the Court
+
+position has firm historical roots as well.                 As Bishop
+explained:
+     “[W]ithin the limits of any discretion as to the punish-
+     ment which the law may have allowed, the judge, when
+     he pronounces sentence, may suffer his discretion to be
+     infuenced by matter shown in aggravation or mitiga-
+     tion, not covered by the allegations of the indictment.”
+     Bishop § 85, at 54.
+“[E]stablishing what punishment is available by law and set-
+ting a specifc punishment within the bounds that the law
+has prescribed are two different things.” Apprendi, 530
+U. S., at 519 (Thomas, J., concurring). Our decision today is
+wholly consistent with the broad discretion of judges to se-
+lect a sentence within the range authorized by law.
+
+                                   IV
+  Here, the sentencing range supported by the jury's verdict
+was fve years' imprisonment to life. The District Court im-
+posed the 7-year mandatory minimum sentence based on its
+fnding by a preponderance of evidence that the frearm was
+“brandished.” Because the fnding of brandishing increased
+the penalty to which the defendant was subjected, it was an
+element, which had to be found by the jury beyond a reason-
+able doubt. The judge, rather than the jury, found brandish-
+ing, thus violating petitioner's Sixth Amendment rights.
+  Accordingly, we vacate the Fourth Circuit's judgment with
+respect to Alleyne's sentence on the § 924(c)(1)(A) conviction
+
+unlimited either as to the kind of information [they] may consider, or the
+source from which it may come”); Williams, 337 U. S., at 246 (“[B]oth
+before and since the American colonies became a nation, courts in this
+country and in England practiced a policy under which a sentencing judge
+could exercise a wide discretion in the sources and types of evidence used
+to assist him in determining the kind and extent of punishment to be
+imposed within limits fxed by law”).
+118             ALLEYNE v. UNITED STATES
+
+                    Sotomayor, J., concurring
+
+and remand the case for resentencing consistent with the
+jury's verdict.
+                                         It is so ordered.
+
+  Justice Sotomayor, with whom Justice Ginsburg and
+Justice Kagan join, concurring.
+   I join the opinion of the Court, which persuasively explains
+why Harris v. United States, 536 U. S. 545 (2002), and Mc-
+Millan v. Pennsylvania, 477 U. S. 79 (1986), were wrongly
+decided. Under the reasoning of our decision in Apprendi
+v. New Jersey, 530 U. S. 466 (2000), and the original meaning
+of the Sixth Amendment, facts that increase the statutory
+minimum sentence (no less than facts that increase the statu-
+tory maximum sentence) are elements of the offense that
+must be found by a jury and proved beyond a reasonable
+doubt. Ante, at 103.
+   Of course, under our doctrine of stare decisis, establishing
+that a decision was wrong does not, without more, justify
+overruling it. While stare decisis is not an “inexorable com-
+mand,” Hohn v. United States, 524 U. S. 236, 251 (1998) (in-
+ternal quotation marks omitted), it is “a basic self-governing
+principle within the Judicial Branch, which is entrusted with
+the sensitive and diffcult task of fashioning and preserving
+a jurisprudential system that is not based upon `an arbitrary
+discretion,' ” Patterson v. McLean Credit Union, 491 U. S.
+164, 172 (1989) (quoting The Federalist No. 78, p. 490 (H.
+Lodge ed. 1888) (A. Hamilton)). We generally adhere to our
+prior decisions, even if we question their soundness, because
+doing so “promotes the evenhanded, predictable, and consist-
+ent development of legal principles, fosters reliance on judi-
+cial decisions, and contributes to the actual and perceived
+integrity of the judicial process.” Payne v. Tennessee, 501
+U. S. 808, 827 (1991). To protect these important values, we
+require a “ ` “special justifcation” ' ” when departing from
+precedent. Dickerson v. United States, 530 U. S. 428, 443
+(2000).
+                   Cite as: 570 U. S. 99 (2013)             119
+
+                    Sotomayor, J., concurring
+
+   A special justifcation is present here. As an initial mat-
+ter, when procedural rules are at issue that do not govern
+primary conduct and do not implicate the reliance interests
+of private parties, the force of stare decisis is reduced. See
+United States v. Gaudin, 515 U. S. 506, 521 (1995); Payne,
+501 U. S., at 828. And any reliance interest that the Federal
+Government and state governments might have is particu-
+larly minimal here because prosecutors are perfectly able to
+“charge facts upon which a mandatory minimum sentence is
+based in the indictment and prove them to a jury.” Harris,
+536 U. S., at 581 (Thomas, J., dissenting). Indeed, even with
+Harris in place, prosecutors already sometimes charge such
+facts and seek to prove them to a jury. See Brief for Na-
+tional Association of Criminal Defense Lawyers et al. as
+Amici Curiae 26. That is precisely what happened here,
+where the verdict form allowed the jury to fnd whether peti-
+tioner had brandished a frearm yet the jury declined to
+make such a fnding. Ante, at 104.
+   In this context, stare decisis does not compel adherence to
+a decision whose “underpinnings” have been “eroded” by
+subsequent developments of constitutional law. Gaudin,
+515 U. S., at 521. In rejecting a constitutional challenge to a
+state statute that increased a defendant's minimum sentence
+based on judicial factfnding, McMillan relied on a distinc-
+tion between “elements” and “sentencing factors.” 477
+U. S., at 86. That distinction was undermined by Apprendi,
+where we held that a legislature may not “remove from the
+jury the assessment of facts that increase the prescribed
+range of penalties to which a criminal defendant is exposed.”
+530 U. S., at 490 (internal quotation marks omitted).
+   In Harris, we squarely confronted the question whether
+“McMillan stands after Apprendi. ” 536 U. S., at 550.
+Five Members of the Court recognized that the cases were
+in fact incompatible. See id., at 569 (Breyer, J., concur-
+ring in part and concurring in judgment); id., at 572, 583
+(Thomas, J., dissenting) (“[O]nly a minority of the Court em-
+120             ALLEYNE v. UNITED STATES
+
+                   Sotomayor, J., concurring
+
+brac[es] the distinction between McMillan and Apprendi
+that forms the basis of today's holding”). In the controlling
+opinion, Justice Breyer nevertheless declined to apply Ap-
+prendi to mandatory minimums because, though he found no
+way to distinguish sentencing foors from sentencing ceilings,
+he could not “yet accept” Apprendi itself. 536 U. S., at 569;
+see also post, at 122 (Breyer, J., concurring in part and con-
+curring in judgment).
+  We have said that a decision may be “of questionable prec-
+edential value” when “a majority of the Court expressly dis-
+agreed with the rationale of [a] plurality.” Seminole Tribe
+of Fla. v. Florida, 517 U. S. 44, 66 (1996). And Harris has
+stood on especially weak ground because its vitality de-
+pended upon the possibility that the Court might retreat
+from Apprendi. See Harris, 536 U. S., at 569–570 (opinion
+of Breyer, J.). That has not happened. Instead, while in-
+dividual Members of this Court have continued to question
+Apprendi, see post, at 122–123 (opinion of Breyer, J.); post,
+at 133–134 (Alito, J., dissenting), its rule has become even
+more frmly rooted in the Court's Sixth Amendment juris-
+prudence in the decade since Harris. We have applied Ap-
+prendi to strike down mandatory sentencing systems at the
+state and federal levels. See Cunningham v. California,
+549 U. S. 270 (2007); United States v. Booker, 543 U. S. 220
+(2005); Blakely v. Washington, 542 U. S. 296 (2004). And
+just last Term, we recognized that Apprendi's reasoning ex-
+tends to criminal fnes. See Southern Union Co. v. United
+States, 567 U. S. 343 (2012).
+  As a result of these decisions, Harris has become even
+more of an outlier. For that reason, I agree that it is appro-
+priate for the Court to “overrule Harris and to apply Ap-
+prendi's basic jury-determination rule to mandatory mini-
+mum sentences” in order to “erase th[is] anomaly” in our
+case law. Post, at 123 (opinion of Breyer, J.). I do not sug-
+gest that every single factor that supports the overruling of
+precedent is present here. Post, at 134–135, n. (Alito, J.,
+                   Cite as: 570 U. S. 99 (2013)             121
+
+                    Sotomayor, J., concurring
+
+dissenting). But particularly in a case where the reliance
+interests are so minimal, and the reliance interests of private
+parties are nonexistent, stare decisis cannot excuse a refusal
+to bring “coherence and consistency,” Patterson, 491 U. S.,
+at 173, to our Sixth Amendment law.
+   If any doubt remained, our decision in Ring v. Arizona,
+536 U. S. 584 (2002), should remove it. Ring considered an
+Apprendi challenge to Arizona's capital sentencing system.
+There, as here, the government urged us to adhere to a pre-
+Apprendi decision upholding that scheme. See Walton v.
+Arizona, 497 U. S. 639 (1990). And there, as here, we re-
+sisted that plea. Ring, 536 U. S., at 609. This case differs
+in only one respect: our post-Apprendi consideration of the
+issue in Harris. But for the reasons given, Harris in no
+way strengthens the force of stare decisis in this case. With
+Apprendi now frmly rooted in our jurisprudence, the Court
+simply gives effect to what fve Members of the Court recog-
+nized in Harris: “[McMillan] and Apprendi are irreconcil-
+able; our Sixth Amendment jurisprudence cannot be home to
+both.” 536 U. S., at 609.
+   Justice Alito is therefore mistaken when he suggests
+that the Court overrules Harris because “there are cur-
+rently fve Justices willing to vote to” do so. Post, at 135, n.
+No doubt, it would be illegitimate to overrule a precedent
+simply because the Court's current membership disagrees
+with it. But that is not a plausible account of the decision
+today. The Court overrules McMillan and Harris because
+the reasoning of those decisions has been thoroughly under-
+mined by intervening decisions and because no signifcant
+reliance interests are at stake that might justify adhering to
+their result. Likewise, Justice Alito exaggerates when
+he suggests that this case creates an important “precedent
+about precedent.” Post, at 134. Rarely will a claim for stare
+decisis be as weak as it is here, where a constitutional rule
+of criminal procedure is at issue that a majority of the Court
+has previously recognized is incompatible with our broader
+122              ALLEYNE v. UNITED STATES
+
+                      Opinion of Breyer, J.
+
+jurisprudence. And fnally, Justice Alito's contention that
+Apprendi and Harris stand on equal footing for stare decisis
+purposes, post, at 133–134, 134–135, n., is simply inconsistent
+with our last decade of Sixth Amendment jurisprudence.
+   Because I believe that the Court's decision to apply Ap-
+prendi to mandatory minimums is consistent with stare deci-
+sis principles, I join the opinion of the Court.
+
+  Justice Breyer, concurring in part and concurring in
+the judgment.
+   Eleven years ago, in Harris v. United States, 536 U. S. 545
+(2002), I wrote that “I cannot easily distinguish Apprendi v.
+New Jersey, 530 U. S. 466 (2000), from this case in terms of
+logic.” Id., at 569 (opinion concurring in part and concur-
+ring in judgment). I nonetheless accepted Harris' holding
+because I could “[n]ot yet accept [Apprendi's] rule.” Ibid.
+I continue to disagree with Apprendi. See 536 U. S., at 569–
+570; United States v. Booker, 543 U. S. 220, 326 (2005) (opin-
+ion dissenting in part); Blakely v. Washington, 542 U. S. 296,
+328 (2004) (dissenting opinion); Apprendi v. New Jersey, 530
+U. S. 466, 555 (2000) (same). But Apprendi has now defned
+the relevant legal regime for an additional decade. And, in
+my view, the law should no longer tolerate the anomaly that
+the Apprendi/Harris distinction creates.
+   The Court's basic error in Apprendi, I believe, was its fail-
+ure to recognize the law's traditional distinction between ele-
+ments of a crime (facts constituting the crime, typically for
+the jury to determine) and sentencing facts (facts affecting
+the sentence, often concerning, e. g., the manner in which the
+offender committed the crime, and typically for the judge
+to determine). The early historical references that this
+Court's opinions have set forth in favor of Apprendi refer to
+offense elements, not to sentencing facts. Thus, when Jus-
+tice Story wrote that the Sixth Amendment's guarantee of
+trial by jury offered “ `securit[y] against the prejudices of
+judges,' ” post, at 127 (Roberts, C. J., dissenting) (quoting
+                   Cite as: 570 U. S. 99 (2013)            123
+
+                     Opinion of Breyer, J.
+
+Commentaries on the Constitution of the United States § 924,
+p. 657 (Abr. 1833)), he was likely referring to elements of a
+crime; and the best answer to Justice Scalia's implicit
+question in Apprendi—what, exactly, does the “right to trial
+by jury” guarantee?—is that it guarantees a jury's determi-
+nation of facts that constitute the elements of a crime, 530
+U. S., at 498–499 (concurring opinion).
+   Although I have set forth these minority views before, see
+Booker, supra, at 326 (opinion dissenting in part); Blakely,
+supra, at 328 (dissenting opinion); Apprendi, supra, at 555
+(same), I repeat this point now to make clear why I cannot
+accept the dissent's characterization of the Sixth Amendment
+as simply seeking to prevent “judicial overreaching” when
+sentencing facts are at issue, post, at 127 (opinion of Rob-
+erts, C. J.). At the very least, the Amendment seeks to
+protect defendants against “the wishes and opinions of the
+government” as well. Ibid. (quoting Story, supra, § 924, at
+657). And, that being so, it seems to me highly anomalous
+to read Apprendi as insisting that juries fnd sentencing
+facts that permit a judge to impose a higher sentence while
+not insisting that juries fnd sentencing facts that require a
+judge to impose a higher sentence. See Harris, supra, at
+569–570 (opinion of Breyer, J.).
+   To overrule Harris and to apply Apprendi's basic jury-
+determination rule to mandatory minimum sentences would
+erase that anomaly. Where a maximum sentence is at
+issue, Apprendi means that a judge who wishes to impose a
+higher sentence cannot do so unless a jury fnds the requisite
+statutory factual predicate. Where a mandatory minimum
+sentence is at issue, application of Apprendi would mean that
+the government cannot force a judge who does not wish to
+impose a higher sentence to do so unless a jury fnds the
+requisite statutory factual predicate. In both instances the
+matter concerns higher sentences; in both instances factfnd-
+ing must trigger the increase; in both instances jury-based
+factfnding would act as a check: in the frst instance, against
+124              ALLEYNE v. UNITED STATES
+
+                     Roberts, C. J., dissenting
+
+a sentencing judge wrongly imposing the higher sentence
+that the judge believes is appropriate, and in the second in-
+stance, against a sentencing judge wrongly being required
+to impose the higher sentence that the judge believes is
+inappropriate.
+  While Harris has been the law for 11 years, Apprendi
+has been the law for even longer; and I think the time has
+come to end this anomaly in Apprendi's application. Con-
+sequently, I vote to overrule Harris. I join Parts I, III–
+B, III–C, and IV of the Court's opinion and concur in its
+judgment.
+  Chief Justice Roberts, with whom Justice Scalia and
+Justice Kennedy join, dissenting.
+   Suppose a jury convicts a defendant of a crime carrying a
+sentence of fve to ten years. And suppose the judge says
+he would sentence the defendant to fve years, but because
+he fnds that the defendant used a gun during the crime, he
+is going to add two years and sentence him to seven. No
+one thinks that this violates the defendant's right to a jury
+trial in any way.
+   Now suppose the legislature says that two years should be
+added to the fve year minimum, if the judge fnds that the
+defendant used a gun during the crime. Such a provision
+affects the role of the judge—limiting his discretion—but has
+no effect on the role of the jury. And because it does not
+affect the jury's role, it does not violate the jury trial guaran-
+tee of the Sixth Amendment.
+   The Framers envisioned the Sixth Amendment as a pro-
+tection for defendants from the power of the Government.
+The Court transforms it into a protection for judges from
+the power of the legislature. For that reason, I respect-
+fully dissent.
+                                 I
+  In a steady stream of cases decided over the last 15 years,
+this Court has sought to identify the historical understand-
+                    Cite as: 570 U. S. 99 (2013)              125
+
+                    Roberts, C. J., dissenting
+
+ing of the Sixth Amendment jury trial right and determine
+how that understanding applies to modern sentencing prac-
+tice. Our key sources in this task have been 19th-century
+treatises and common law cases identifying which facts qual-
+ifed as “elements” of a crime, and therefore had to be alleged
+in the indictment and proved to a jury beyond a reasonable
+doubt. See, e. g., Apprendi v. New Jersey, 530 U. S. 466, 476–
+483, 489–490, n. 15 (2000) (collecting sources); id., at 501–518
+(Thomas, J., concurring) (same). With remarkable uniform-
+ity, those authorities provided that an element was “what-
+ever is in law essential to the punishment sought to be in-
+ficted.” 1 J. Bishop, Criminal Procedure 50 (2d ed. 1872);
+see also Apprendi, supra, at 489, n. 15 (“ `[T]he indictment
+must contain an allegation of every fact which is legally es-
+sential to the punishment to be inficted' ” (quoting United
+States v. Reese, 92 U. S. 214, 232 (1876) (Clifford, J., dissent-
+ing))); 1 Bishop, supra, § 87, at 55 (an indictment must include
+“any particular fact which the law makes essential to the
+punishment”).
+   Judging that this common law rule best refects what the
+Framers understood the Sixth Amendment jury right to pro-
+tect, we have struck down sentencing schemes that were in-
+consistent with the rule. In Apprendi, for example, the de-
+fendant pleaded guilty to a crime that carried a maximum
+sentence of ten years. After his plea, however, the trial
+judge determined that the defendant had committed the
+crime with a biased purpose. Under a New Jersey law, that
+fnding allowed the judge to impose up to ten additional
+years in prison. Exercising that authority, the judge sen-
+tenced the defendant to 12 years. 530 U. S., at 469–471.
+   Because the sentence was two years longer than would
+have been possible without the fnding of bias, that fnd-
+ing was “essential to the punishment” imposed. 1 Bishop,
+supra, at 50; see Apprendi, 530 U. S., at 491–492. Thus, in
+line with the common law rule, we held the New Jersey pro-
+cedure unconstitutional. Id., at 497.
+126              ALLEYNE v. UNITED STATES
+
+                    Roberts, C. J., dissenting
+
+   Subsequent cases have worked out how this principle ap-
+plies in other contexts, such as capital sentencing regimes,
+state and federal sentencing guidelines, or criminal fnes.
+See Ring v. Arizona, 536 U. S. 584 (2002); Blakely v. Wash-
+ington, 542 U. S. 296 (2004); United States v. Booker, 543
+U. S. 220 (2005); Southern Union Co. v. United States, 567
+U. S. 343 (2012). Through all of them, we have adhered to
+the rule, rooted in the common law understanding described
+above, that we laid down in Apprendi: “Other than the fact
+of a prior conviction, any fact that increases the penalty for
+a crime beyond the prescribed statutory maximum must be
+submitted to a jury, and proved beyond a reasonable doubt.”
+530 U. S., at 490; see Blakely, supra, at 301 (quoting above
+statement); Booker, supra, at 231 (same); Southern Union
+Co., supra, at 348 (same); see also Ring, supra, at 588–589
+(Sixth Amendment “does not permit a defendant to be `ex-
+pose[d] . . . to a penalty exceeding the maximum he would
+receive if punished according to the facts refected in the
+jury verdict alone' ” (quoting Apprendi, supra, at 483; alter-
+ations in original)).
+   We have embraced this 19th-century common law rule
+based not only on a judgment that it refects the understand-
+ing in place when the Sixth Amendment was ratifed, but
+also on the “need to give intelligible content to the right
+of jury trial.” Blakely, supra, at 305. As Justice Scalia
+wrote in Apprendi, it is unclear “what the right to trial by
+jury does guarantee if . . . it does not guarantee . . . the
+right to have a jury determine those facts that determine
+the maximum sentence the law allows.” 530 U. S., at 498–
+499 (concurring opinion).
+   After all, if a judge's factfnding could authorize a sentence
+beyond that allowed by the jury's verdict alone, the jury trial
+would be “a mere preliminary to a judicial inquisition into
+the facts of the crime the State actually seeks to punish.”
+Blakely, supra, at 306–307. The Framers clearly envisioned
+                    Cite as: 570 U. S. 99 (2013)              127
+
+                     Roberts, C. J., dissenting
+
+a more robust role for the jury. They appreciated the dan-
+ger inherent in allowing “justices . . . named by the crown”
+to “imprison, dispatch, or exile any man that was obnoxious
+to the government, by an instant declaration, that such is
+their will and pleasure.” 4 W. Blackstone, Commentaries on
+the Laws of England 343 (1769). To guard against this “vio-
+lence and partiality of judges appointed by the crown,” the
+common law “wisely placed th[e] strong . . . barrier, of . . .
+trial by jury, between the liberties of the people, and the
+prerogative of the crown.” Ibid. The Sixth Amendment
+therefore provided for trial by jury as a “double security,
+against the prejudices of judges, who may partake of the
+wishes and opinions of the government, and against the pas-
+sions of the multitude, who may demand their victim with
+a clamorous precipitancy.” J. Story, Commentaries on the
+Constitution of the United States § 924, p. 657 (Abr. 1833);
+see also The Federalist No. 83, p. 499 (C. Rossiter ed. 1961)
+(A. Hamilton) (discussing criminal jury trial as a protection
+against “judicial despotism”). Our holdings that a judge
+may not sentence a defendant to more than the jury has au-
+thorized properly preserve the jury right as a guard against
+judicial overreaching.
+                              II
+   There is no such risk of judicial overreaching here. Under
+18 U. S. C. § 924(c)(1)(A)(i), the jury's verdict fully authorized
+the judge to impose a sentence of anywhere from fve years
+to life in prison. No additional fnding of fact was “essen-
+tial” to any punishment within the range. After rendering
+the verdict, the jury's role was completed, it was discharged,
+and the judge began the process of determining where
+within that range to set Alleyne's sentence.
+   Everyone agrees that in making that determination, the
+judge was free to consider any relevant facts about the of-
+fense and offender, including facts not found by the jury be-
+yond a reasonable doubt.
+128              ALLEYNE v. UNITED STATES
+
+                    Roberts, C. J., dissenting
+
+      “[B]oth before and since the American colonies became
+      a nation, courts . . . practiced a policy under which a
+      sentencing judge could exercise a wide discretion in the
+      sources and types of evidence used to assist him in de-
+      termining the kind and extent of punishment to be im-
+      posed within limits fxed by law.” Williams v. New
+      York, 337 U. S. 241, 246 (1949).
+
+As Apprendi itself recognized, “nothing in this history sug-
+gests that it is impermissible for judges to exercise discre-
+tion—taking into consideration various factors relating both
+to offense and offender—in imposing a judgment within the
+range prescribed by statute.” 530 U. S., at 481 (emphasis
+deleted); see also Dillon v. United States, 560 U. S. 817, 828–
+829 (2010). And the majority does not dispute the point.
+Ante, at 116 (“Our ruling today does not mean that any fact
+that infuences judicial discretion must be found by a jury.”).
+Thus, under the majority's rule, in the absence of a statutory
+mandatory minimum, there would have been no constitu-
+tional problem had the judge, exercising the discretion given
+him by the jury's verdict, decided that seven years in prison
+was the appropriate penalty for the crime because of his
+fnding that the frearm had been brandished during the
+offense.
+   In my view, that is enough to resolve this case. The jury's
+verdict authorized the judge to impose the precise sentence
+he imposed for the precise factual reason he imposed it. As
+we have recognized twice before, the Sixth Amendment de-
+mands nothing more. See Harris v. United States, 536 U. S.
+545, 568–569 (2002); McMillan v. Pennsylvania, 477 U. S. 79,
+93 (1986).
+                              III
+   This approach is entirely consistent with Apprendi. As I
+have explained, Apprendi's constraint on the normal legisla-
+tive control of criminal procedure draws its legitimacy from
+two primary principles: (1) common law understandings of
+                   Cite as: 570 U. S. 99 (2013)            129
+
+                   Roberts, C. J., dissenting
+
+the “elements” of a crime, and (2) the need to preserve the
+jury as a “strong barrier” between defendants and the State.
+Neither of those principles supports the rule the majority
+adopts today.
+   First, there is no body of historical evidence supporting
+today's new rule. The majority does not identify a single
+case holding that a fact affecting only the sentencing foor
+qualifed as an element or had to be found by a jury, nor does
+it point to any treatise language to that effect. Ante, at
+109–111. To be sure, the relatively recent vintage of manda-
+tory minimum sentencing enhancements means that few, if
+any, 19th-century courts would have encountered such a fact
+pattern. So I do not mean to suggest that the absence of
+historical condemnation of the practice conclusively estab-
+lishes its constitutionality today. But given that Apprendi's
+rule rests heavily on affrmative historical evidence about
+the practices to which we have previously applied it, the lack
+of such evidence on statutory minimums is a good reason not
+to extend it here.
+   Nor does the majority's extension of Apprendi do anything
+to preserve the role of the jury as a safeguard between the
+defendant and the State. That is because even if a jury does
+not fnd that the frearm was brandished, a judge can do so
+and impose a harsher sentence because of his fnding, so long
+as that sentence remains under the statutory maximum.
+The question here is about the power of judges, not juries.
+Under the rule in place until today, a legislature could tell
+judges that certain facts carried certain weight, and re-
+quire the judge to devise a sentence based on that weight—
+so long as the sentence remained within the range author-
+ized by the jury. Now, in the name of the jury right that
+formed a barrier between the defendant and the State, the
+majority has erected a barrier between judges and legisla-
+tures, establishing that discretionary sentencing is the do-
+main of judges. Legislatures must keep their respectful
+distance.
+130               ALLEYNE v. UNITED STATES
+
+                     Roberts, C. J., dissenting
+
+  I fnd this new rule impossible to square with the historical
+understanding of the jury right as a defense from judges,
+not a defense of judges. See Apprendi, supra, at 498
+(Scalia, J., concurring) (“Judges, it is sometimes necessary
+to remind ourselves, are part of the State”). Just as the
+Sixth Amendment “limits judicial power only to the extent
+that the claimed judicial power infringes on the province of
+the jury,” Blakely, 542 U. S., at 308, so too it limits legislative
+power only to the extent that power infringes on the prov-
+ince of the jury. Because the claimed infringement here is
+on the province of the judge, not the jury, the jury right has
+no work to do.
+                               IV
+   The majority offers several arguments to the contrary. I
+do not fnd them persuasive.
+   First, the majority asserts that “because the legally pre-
+scribed range is the penalty affxed to the crime, it follows
+that a fact increasing either end of the range produces a new
+penalty and constitutes an ingredient of the offense.” Ante,
+at 112 (citation omitted). The syllogism trips out of the gate,
+for its frst premise—that the constitutionally relevant “pen-
+alty” includes the bottom end of the statutory range—simply
+assumes the answer to the question presented. Neither of
+the historical sources to which the majority points gives an
+answer: The Bishop treatise speaks only to situations in
+which “a statute prescribes a particular punishment,” not a
+range of possible punishments. 1 Bishop, Criminal Proce-
+dure § 598, at 360–361. The Wharton treatise is similarly
+unhelpful, focusing on statutes that change the maximum or
+alter the nature of the common law crime. See 1 F. Whar-
+ton, Criminal Law § 371, p. 291 (rev. 7th ed. 1874). The
+sources provided in the Apprendi concurrence offer no sup-
+port, for as already discussed, we lack historical evidence
+about the treatment of facts that altered only the foor of a
+sentencing range.
+                   Cite as: 570 U. S. 99 (2013)             131
+
+                    Roberts, C. J., dissenting
+
+   Second, the majority observes that “criminal statutes have
+long specifed both the foor and ceiling of sentence ranges,
+which is evidence that both defne the legally prescribed pen-
+alty.” Ante, at 112. Again, though, this simply assumes the
+core premise: that the constitutionally relevant “penalty” in-
+volves both the statutory minimum and the maximum. Un-
+less one accepts that premise on faith, the fact that statutes
+have long specifed both foor and ceiling is evidence of noth-
+ing more than that statutes have long specifed both the foor
+and the ceiling. Nor does it help to say that “the foor of a
+mandatory range is as relevant to wrongdoers as the ceiling.”
+Ante, at 113. The meaning of the Sixth Amendment does
+not turn on what wrongdoers care about most.
+   More importantly, legal rules frequently focus on the maxi-
+mum sentence while ignoring the minimum, even though
+both are “relevant” to punishment. Closest to this case, the
+question whether the jury right applies at all turns on
+whether the maximum sentence exceeds six months—not,
+say, whether the minimum punishment involves time in
+prison. Blanton v. North Las Vegas, 489 U. S. 538, 543
+(1989); see also Lewis v. United States, 518 U. S. 322, 326
+(1996) (“In evaluating the seriousness of the offense, we place
+primary emphasis on the maximum prison term authorized”).
+Likewise, the rights to vote and to bear arms are typically
+denied to felons—that is, those convicted of a crime with a
+maximum sentence of more than one year in prison. See
+Richardson v. Ramirez, 418 U. S. 24, 48 (1974); District of
+Columbia v. Heller, 554 U. S. 570, 626 (2008); Black's Law
+Dictionary 694 (9th ed. 2009). Examples of other distinc-
+tions turning only on maximum penalties abound, as in cases
+of recidivism enhancements that apply only to prior convic-
+tions with a maximum sentence of more than a specifed
+number of years. See, e. g., 18 U. S. C. § 924(e)(2). That a
+minimum sentence is “relevant” to punishment, and that a
+statute defnes it, does not mean it must be treated the same
+as the maximum sentence the law allows.
+132              ALLEYNE v. UNITED STATES
+
+                       Alito, J., dissenting
+
+  Third, the majority offers that “it is impossible to dispute
+that facts increasing the legally prescribed foor aggravate
+the punishment.” Ante, at 113. This argument proves too
+much, for it would apply with equal force to any fact which
+leads the judge, in the exercise of his own discretion, to
+choose a penalty higher than he otherwise would have cho-
+sen. The majority nowhere explains what it is about the
+jury right that bars a determination by Congress that bran-
+dishing (or any other fact) makes an offense worth two extra
+years, but not an identical determination by a judge. Sim-
+ply calling one “aggravation” and the other “discretion” does
+not do the trick.
+  Fourth, the majority argues that “[i]t is no answer to say
+that the defendant could have received the same sentence
+with or without” a particular factual fnding, pointing out
+“that a defendant could not be convicted and sentenced for
+assault, if the jury only fnds the facts for larceny, even if the
+punishments prescribed for each crime are identical.” Ante,
+at 115. In that hypothetical case, the legislature has chosen
+to defne two crimes with two different sets of elements.
+Courts must, of course, respect that legislative judgment.
+But that tells us nothing about when courts can override
+the legislature's decision not to create separate crimes, and
+instead to treat a particular fact as a trigger for a minimum
+sentence within the already-authorized range.
+
+                         *      *      *
+   I will not quibble with the majority's application of our
+stare decisis precedents. But because I believe the majori-
+ty's new rule—safeguarding the power of judges, not ju-
+ries—fnds no support in the history or purpose of the Sixth
+Amendment, I respectfully dissent.
+
+  Justice Alito, dissenting.
+  The Court overrules a well-entrenched precedent with
+barely a mention of stare decisis. See ante, at 116, n. 6.
+                    Cite as: 570 U. S. 99 (2013)             133
+
+                       Alito, J., dissenting
+
+Stare decisis is, of course, not an “inexorable command” in
+the feld of constitutional law. Payne v. Tennessee, 501 U. S.
+808, 828 (1991). Nevertheless, the Court ought to be con-
+sistent in its willingness to reconsider precedent. If Harris
+v. United States, 536 U. S. 545 (2002), and McMillan v. Penn-
+sylvania, 477 U. S. 79 (1986), can be cast aside simply be-
+cause a majority of this Court now disagrees with them, that
+same approach may properly be followed in future cases.
+See Arizona v. Gant, 556 U. S. 332, 358–364 (2009) (Alito,
+J., dissenting).
+   If the Court is of a mind to reconsider existing precedent,
+a prime candidate should be Apprendi v. New Jersey, 530
+U. S. 466 (2000). Although Apprendi purported to rely on
+the original understanding of the jury trial right, there are
+strong reasons to question the Court's analysis on that point.
+See, e. g., Bibas, Judicial Fact-Finding and Sentence En-
+hancements in a World of Guilty Pleas, 110 Yale L. J. 1097,
+1123–1132 (2001) (critiquing the historical evidence relied
+upon by the Apprendi majority and concurrence, and con-
+cluding (1) that the “broad judicial discretion” characteris-
+tic of 18th-century common-law misdemeanor sentencing
+“undercuts the suggestion that sentencing was the sacred
+province of juries alone,” (2) that even the “nineteenth-
+century tradition was not uniform, suggesting that the com-
+mon law had no fxed rule on the subject,” and (3) that
+“no eighteenth-century evidence link[ed] this [nineteenth-
+century] tradition back to the time of the Founding”); Lit-
+tle & Chen, The Lost History of Apprendi and the Blakely
+Petition for Rehearing, 17 Fed. Sentencing Rep. 69, 69–74
+(2004) (“Blakely and Apprendi were undoubtedly founded on
+an erroneous historical understanding of the Framers' views
+in 1790 when they wrote the 6th Amendment's jury-trial
+guarantee. The fact that the Framers themselves wrote
+over a dozen indeterminate sentencing ranges in the frst
+federal crime bill (see 1 Stat. 112–118 . . . ), has simply been
+overlooked by the Court”); Mitchell, Apprendi's Domain,
+134                  ALLEYNE v. UNITED STATES
+
+                            Alito, J., dissenting
+
+2006 S. Ct. Rev. 297, 298–299 (2006) (arguing, in the context
+of defending a broader conception of the jury right, that “Ap-
+prendi's historical claim that sentencing enhancements were
+treated as `elements' of offenses whenever they increased
+a defendant's maximum punishment is demonstrably mis-
+taken” and that “the platitudes from Joel Prentiss Bishop's
+nineteenth-century treatises, which the pro-Apprendi Jus-
+tices repeatedly invoke to support this assertion [that sen-
+tencing enhancements that increased a maximum punish-
+ment were treated as elements of the offense], are patently
+false and did not accurately describe the law in actual court
+decisions of that era” (footnotes omitted)).
+   The Court's decision creates a precedent about precedent
+that may have greater precedential effect than the dubious
+decisions on which it relies.*
+
+   *Speaking for herself, Justice Ginsburg, and Justice Kagan—but
+not for the Court—Justice Sotomayor argues that Harris' stare decisis
+value is undermined by the subsequent reasoning of the Court's Apprendi
+line of cases and by the fact that no one rationale in Harris commanded
+fve votes. I disagree.
+   In my view, Harris' force is not vitiated by the Court's Apprendi line
+of cases, for two reasons. First, that line of cases is predicated on a pur-
+ported Sixth Amendment requirement that juries fnd facts that increase
+maximum penalties, not mandatory minimums. Accordingly, as The
+Chief Justice's dissent persuasively explains, ante, at 124–130, Apprendi
+and its progeny have no impact on the distinct question resolved by Har-
+ris, which does not bear on the jury right. Second, the Apprendi line is
+now too intellectually incoherent to undermine any “contrary” precedents.
+If the rationale of Apprendi—which, as broadly construed by the Court in
+this case, is that “[a]ny fact that, by law, increases the penalty for a crime
+is an `element' that must be submitted to the jury and found beyond a
+reasonable doubt,” ante, at 103—were taken seriously, discretionary sen-
+tencing, as prescribed by 18 U. S. C. § 3553(a), should also be held to violate
+the Sixth Amendment. But a majority of the Court has not been willing
+to go where its reasoning leads.
+   Nor can it be correct to say that “Harris in no way strengthens the
+force of stare decisis in this case” because a “ `majority of the Court ex-
+pressly disagreed with the rationale of [a] plurality.' ” Ante, at 120–121
+(Sotomayor, J., concurring) (quoting Seminole Tribe of Fla. v. Florida,
+                        Cite as: 570 U. S. 99 (2013)                      135
+
+                            Alito, J., dissenting
+
+
+
+
+517 U. S. 44, 66 (1996)). Decisions in which no one rationale commands a
+majority of the Court—including prominent decisions based on the views
+of a single Justice—are often thought to have precedential effect. See,
+e. g., United States v. Booker, 543 U. S. 220 (2005); Regents of Univ. of Cal.
+v. Bakke, 438 U. S. 265, 269–272 (1978) (opinion of Powell, J.). And, of
+course, if Harris is not entitled to stare decisis weight, then neither is the
+Court's opinion in this case. After all, only four Members of the Court
+think that the Court's holding is the correct reading of the Constitution.
+See ante, at 122–123 (Breyer, J., concurring in part and concurring in
+judgment).
+   As she concedes, ante, at 120–121, Justice Sotomayor's concurrence is
+necessarily selective in its discussion of the factors that the Court has
+previously found to be relevant to the application of stare decisis. For
+example, she does not argue—presumably because there is no good argu-
+ment to be made—that Harris and McMillan v. Pennsylvania, 477 U. S.
+79 (1986) (which provide the framework under which criminal prosecutions
+have been carried out for at least the past 27 years) have proved “ `un-
+workable.' ” Vieth v. Jubelirer, 541 U. S. 267, 306 (2004) (plurality opin-
+ion) (quoting Payne v. Tennessee, 501 U. S. 808, 827 (1991)). Nor does she
+contend that “circumstances” outside the Court “have changed so radically
+as to undermine [Harris'] critical factual assumptions.” Randall v. Sor-
+rell, 548 U. S. 230, 244 (2006) (plurality opinion). Indeed, no party or ami-
+cus has cited any such circumstances.
+   In short, other than the fact that there are currently fve Justices willing
+to vote to overrule Harris, and not fve Justices willing to overrule Ap-
+prendi, there is no compelling reason why the Court overrules the former
+rather than the latter. If the opportunity arises in the future to overrule
+Apprendi or the present case—both of which presumably involve “proce-
+dural rules . . . that do not govern primary conduct and do not implicate
+the reliance interests of private parties,” ante, at 119 (Sotomayor, J., con-
+curring)—the precedent the Court sets today will be relevant to the issue
+of stare decisis.
+

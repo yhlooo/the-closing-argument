@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Main_template.dwt" codeOutsideHTMLIsLocked="false" -->
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- InstanceBeginEditable name="doctitle" -->
+<title>SCD - Grand Juror Handbook</title>
+<meta name="TITLE" content="SCD - Grand Juror Handbook />
+<meta name="Description" content="United States District Court, District of South Carolina Grand Juror Handbook" />
+
+<!-- InstanceEndEditable -->
+		<style type="text/css">
+ .menutitle{
+	cursor:pointer;
+	margin-bottom: 5px;
+	margin-left:3px; 
+	margin-right: 3px;
+	background-color:#ABABAB;
+	color:#000000;
+	width:140px;
+	padding:0px;
+	text-align:center;
+	font-weight:bold; 
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 16px;
+	/*/*/border:1px solid #000000;/* */
+	}
+	
+ .submenu{
+		margin-left:4px;
+		margin-right: 0px;
+		margin-bottom: 0.5em;
+		text-decoration:none;
+		font-family: Tahoma, Verdana, Arial, sans-serif;
+		font-size: 13px;
+		color: #555555;
+		font-weight: 300;
+	}
+
+</style>
+		<script type="text/javascript">
+
+/***********************************************
+* Switch Menu script- by Martial B of http://getElementById.com/
+* Modified by Dynamic Drive for format & NS4/IE4 compatibility
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+		if(el.style.display != "block"){ //DynamicDrive.com change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") //DynamicDrive.com change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+/*
+
+  Added code to always expand sub1 when displaying
+  root level index page
+  
+  BBC
+ 
+*/
+var loc1 = location.href.indexOf("/",8);
+var loc = location.href.lastIndexOf("/");
+if ( loc1 == loc && location.href.substr(loc+1) == "index.asp" )
+ {
+    SwitchMenu("sub1");
+ }
+else
+ { 
+	
+	if (persistmenu=="yes"){
+	var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+	var cookievalue=get_cookie(cookiename)
+	if (cookievalue!="")
+	document.getElementById(cookievalue).style.display="block"
+	}
+ }
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+		<!-- This is for the MENU Layout -->
+		<script type="text/JavaScript" language="JavaScript"> 
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+		<script type="text/JavaScript" language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+		<script type="text/javascript" src="../Scripts/AC_RunActiveContent.js"></script>
+		<script type="text/javascript" src="../p7tbm/p7tbmenu.js"></script>
+		<script type="text/javascript" src="../p7tm/p7tmscripts_mod.js"></script>
+		<style type="text/css" media="screen">
+<!--
+@import url("../p7tbm/p7tbm_basic_01.css");
+-->
+</style>
+        <link rel="stylesheet" media="print" href="/CSS/print.css" type="text/css" /> 
+		<link href="../CSS/USDC_Layout.css" type="text/css" rel="stylesheet" />
+		<link href="../p7tm/p7tm.css" type="text/css" rel="stylesheet" />
+		<link href="../p7tm/USDC07.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript">
+
+        function switchMenu(obj) {
+            var el = document.getElementById(obj);
+			if ( document.URL.indexOf("/default.asp") > -1)
+			{
+				if ( el.style.display != "none" ) {
+					el.style.display = 'none'; 
+				}
+				else {
+					el.style.display = '';
+				}
+			}
+        }
+        </script>        
+		<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+	</head>
+
+	<body class="twoColLiqLtHdr"  onload="P7_initTBM(1,2,0,1,200,1);P7_TMclass();P7_TMopen();switchMenu('myvar');" bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+
+	<div id="header" style="background-color:#FFFFFF"> 
+		<a href="/default.asp"  title="Home - www.scd.uscourts.gov" > 
+           <img src="../Graphics/top_grey.gif" alt="USDCSC Logo" width="782" height="114"  longdesc="desc/d_logo.html" border="0"
+        onmouseover="this.src='/Graphics/top_grey_h.gif'" onmouseout="this.src='/Graphics/top_grey.gif'"  title="Home - www.scd.uscourts.gov" />
+       </a>
+	</div>
+		<div id="container">			
+		<!-- end #header --><!-- Start TOP MENU -->
+			<div id="Top_Bar_Holder"> 
+
+					<div id="p7TBM">
+						<div id="p7TBMroot">
+							<div id="p7TBMrootbox">
+								<ul class="p7TBMtext">
+									<li><a id="p7TBMt08" href="/StandingOrders/index.asp">STANDING ORDERS</a></li>                                
+									<li><a id="p7TBMt06" href="/navtop/rules.asp">RULES</a></li>
+									<li><a id="p7TBMt05" href="/navtop/records.asp">RECORDS</a></li>
+									<li><a id="p7TBMt04" href="/Court/index.asp">GENERAL INFORMATION</a></li>
+									<li><a id="p7TBMt07" href="/FORMS/index.asp">FORMS</a></li>
+									<li><a id="p7TBMt03" href="/navtop/links.asp">LINKS</a></li>
+									<li><a id="p7TBMt02" href="/navtop/whatsnew.asp">WHAT'S NEW</a></li>
+									<li><a id="p7TBMt01" href="/navtop/home.asp">HOME</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--[if lte IE 6]>
+						<style>#p7TBM div, #p7TBM ul, #p7TBM a {height:1%;}</style>
+						<![endif]--></div>
+				
+			</div>
+			<!-- END TOP MENU --><!-- end #sidebar2 -->
+			<div id="sidebar1">
+				<div class="Search_Box_BG">
+					<div>
+						<center>
+							<script language="JavaScript">
+<!--
+function form1_Validator(theForm)
+{
+
+
+if (document.search.searchstring.value == "")
+{
+document.search.searchstring.focus();
+return (false);
+}
+
+document.search.action="/Search/index.asp";
+document.search.submit();
+return false;
+
+}
+//--> 
+</script>
+
+
+<style>
+	.cse input.gsc-input, input.gsc-input
+	{
+		   background-image:none !important;
+	}
+	
+	.top-search{
+	position: absolute;
+	top:118px;
+	right: 50px;
+	}
+	#searchform #s{
+	color: #49494b;
+	font-size: 12px;
+	width: 160px;
+	height: 21px;
+	margin: 0px 0px 5px 0px;
+	padding: 2px 35px 2px 8px;
+	border: 0;
+	background: #f0efeb;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	}
+	#searchform #searchsubmit{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 25px;
+	height: 25px;
+	border: 0px;
+	background: url(../img/search-submit.png) no-repeat transparent -3px 2px;
+	}
+</style>         
+<form class="Search_Form" id="searchbox_012119538469894062112:yvu4wakn628" action="/search/results.asp">
+<img src="../Graphics/spacer.gif" height="1" width="1" /> 
+  <input value="012119538469894062112:yvu4wakn628" name="cx" type="hidden"/>
+  <input value="FORID:11" name="cof" type="hidden"/>
+  <input id="q" style="width:110px;" name="q" size="10" type="text" />
+ <input type="image" name="sa" value="Submit" src="../Graphics/spacer.gif" alt="Submit" align="middle" height="19" width="100" />
+</form>
+
+
+
+                            
+                            
+						</center>
+					</div>
+				</div>
+				<!-- Left Menu Structure -->
+				<!-- Keep all menus within masterdiv-->
+
+<div id="masterdiv" style="width:200">	
+
+	<!-- 	menu		-->	
+	
+	
+	<div class="menutitle" onclick="SwitchMenu('sub1')">ECF</div>
+	<span id="sub1" class="submenu">
+		<a class="menulink" href="/links/ecf.asp" target="_blank"><b>Logon to ECF/PACER</b></a><br />
+		<a class="menulink" href="/CMECF/annoucements.asp">	Announcements</a><br />
+		<a class="menulink" href="/nextgen">NextGen CM/ECF</a><br />
+		<a class="menulink" href="/CMECF/procedures.asp">		Procedures</a><br />
+		<a class="menulink" href="/Forms/index.asp?c1ygho=53gHeoKnBkj8&c1AZk=ECF_Registration_Forms&c1taZ=ECF_Registration_Forms&hsd=43xzczdsfr">Registration Forms</a><br />
+
+		<a class="menulink" href="/CMECF/ECFResources.asp">	Resources</a><br />
+		<a class="menulink" href="/CMECF/troubleshooting.asp">Troubleshooting</a><br />
+	</span>
+	
+
+	<!-- 	menu		-->	
+	
+	<div class="menutitle" onclick="SwitchMenu('sub2')">Attorneys</div>
+	<span id="sub2" class="submenu">
+	    <a class="menulink" href="/Attorney/admission.asp">Admission to Practice</a><br />
+		<a class="menulink" href="/Attorney/cja.asp">CJA </a><br />
+		<a class="menulink" href="/eCourtroom/index.asp">Electronic Courtrooms</a><br />
+		<a class="menulink" href="/Attorney/attorneyID.asp">Federal ID Search</a><br />	
+		<a class="menulink" href="/records/copies.asp">Juror Questionnaires</a><br />	
+		<a class="menulink" href="/pji">Pattern Jury Instructions</a><br />	
+		<a class="menulink" href="/power-act">POWER Act</a><br />	
+		<a class="menulink" href="/Attorney/ProBono.asp">Pro Bono Opportunities</a><br />
+	    <a class="menulink" href="/AttorneyResourceManuals/index.asp">Resource Manuals</a><br />
+		<a class="menulink" href="/links/doi.asp" target="_blank"> Sureties-SC DOI Info</a><br />
+		<a class="menulink" href="/links/treas.asp" target="_blank"> Sureties-Treasury Listing</a><br />
+		<a class="menulink" href="/CMECF/Training.asp">		Training Resources </a><br />
+	    <a class="menulink" href="/CMECF/DOCS/Transcript_Filing_Instructions_Attorneys.pdf" target="_blank">Transcript Redaction</a><br />
+		<a class="menulink" href="/court/Transcripts.asp">Transcript Requests</a><br />
+	</span>
+
+	
+
+
+	<!-- 	menu		-->	
+		
+	<div class="menutitle" onclick="SwitchMenu('sub3')">Judges</div>
+	<span id="sub3" class="submenu"><a class="menulink" href="/Judges/distjudge.asp">District Judges</a><br />
+		<a class="menulink" href="/Judges/magjudge.asp">Magistrate Judges</a><br />
+		<a class="menulink" href="/CMECF/preferences.asp">Filing Preferences</a><br />
+		<a class="menulink" href="/Judges/calendar.asp"><font style="font-size:13px">Jury Selection Calendar</font></a><br />
+		<a class="menulink" href="/Judges/seminar.asp">Seminar Disclosure</a><br />
+	</span>
+
+	<!-- 	menu				
+	
+	<div class="menutitle" onclick="SwitchMenu('sub99')"><a style="text-decoration:none; font-size:12px" href="/judmisconduct.asp">Judicial Misconduct and Disability</a>
+	</div>
+	-->
+	
+	<!-- 	menu		-->	
+	
+
+	<div class="menutitle" onclick="window.location='/Jury/jury.asp';SwitchMenu('sub4')">Jurors</div>
+<span id="sub4">
+</span>
+<!---
+	<div class="menutitle" onclick="SwitchMenu('sub4')">Jurors</div>
+	<span id="sub4" class="submenu"><a class="menulink" href="/Jury/announcements.asp">Announcements</a><br />
+		<a class="menulink" href="/Jury/location.asp">Court Locations</a><br />
+		<a class="menulink" href="/Jury/excuses.asp">Excuses</a><br />
+		<a class="menulink" href="/Jury/exemptions.asp">Exemptions</a><br />
+		<a class="menulink" href="/Jury/FAQ.asp">FAQs</a><br />
+		<a class="menulink" href="/Jury/handbooks.asp">Handbooks</a><br />
+		<a class="menulink" href="/Jury/guideline.asp">Jury Duty Information</a><br />
+		<a class="menulink" href="/Forms/Jury/Standard_Jury_Questionnaire.pdf" target="_blank">Juror Questionnaire</a><br />
+		<a class="menulink" href="/Forms/Jury/Jury_Plan.pdf" target="_blank">Jury Selection Plan</a><br />
+		<a class="menulink" href="/Jury/qualifications.asp">Qualifications</a><br />
+	</span>
+
+--->
+
+
+	<!-- 	menu		-->	
+	
+	<div class="menutitle" onclick="SwitchMenu('sub7')">Mediation / ADR</div>
+	<span id="sub7" class="submenu">
+		<a class="menulink" href="/Mediation/mediatr.asp">Certified Mediator Listing</a><br />
+		<a class="menulink" href="/Forms/index.asp?c1ygho=53gHeoKnBkj8&c1AZk=Mediation_Alternative_Dispute_Resolution&c1taZ=Mediation_Forms%20and%20Orders&hsd=43xzczdsfr">Forms & Orders</a><br />
+		<a class="menulink" href="/Mediation/guideline.asp">Guidelines</a><br />
+		
+	</span>
+
+	
+
+	<!-- 	menu		-->	
+	
+	<div class="menutitle" onclick="SwitchMenu('sub5')">Pro Se<br><font style="font-size:11px">Representing Yourself</font></div>
+	<span id="sub5" class="submenu">
+		<a class="menulink" href="/docs/Warning_to_Pro_Se.pdf" target="_blank">Pro Se WARNING</a><br />
+	   <!-- <a class="menulink" href="/Forms/index.asp?c1ygho=53gHeoKnBkj8&c1AZk=Pro_Se&c1taZ=Pro_Se_Forms&hsd=43xzczdsfr" >Forms</a><br /> -->
+	   <a class="menulink" href="/FORMS/indexProSe.asp" >Forms</a><br />
+	    <a class="menulink" href="/DOCS/PROSE.pdf" target="_blank">Guide</a><br />	
+	    <a class="menulink" href="/CMECF/DOCS/Transcript_Filing_Instructions_ProSe.pdf" target="_blank">Transcript Redaction</a><br />	
+	</span>
+
+
+
+	<!-- 	menu		-->	
+		
+	<div class="menutitle" onclick="SwitchMenu('sub6')">Reference</div>
+	<span id="sub6" class="submenu">
+
+		<a class="menulink" href="/Filing/bankruptcy.asp">Bankruptcy transfers</a><br />	
+		<a class="menulink" href="/Filing/casenum.asp">Case number explanation</a><br />	
+		<a class="menulink" href="/Filing/misc.asp">Miscellaneous Cases</a><br />		
+		<a class="menulink" href="/Attorney/PostJudge.asp">Post Judgment</a><br />			 
+		<a class="menulink" href="/Filing/referral.asp">Referral of Cases</a><br />								
+	</span>
+	
+	<div class="menutitle" onclick="window.location='/cases/index.asp';SwitchMenu('sub71')">Cases of Interest</div>
+	<span id="sub71"></span>
+	<div class="menutitle" onclick="window.location='/media';SwitchMenu('sub72')">Media</div>
+	<span id="sub72"></span>
+
+	<!-- 	menu		-->	
+		
+	<div class="menutitle" onclick="SwitchMenu('sub8')">Vacancies</div>
+	<span id="sub8" class="submenu"></span>
+	<a class="menulink" href="https://www.scd.uscourts.gov/vacancies/26_08_Pro_Se_Law_Clerk_Columbia_Greenville.pdf" style="font-size:8px; font-weight:normal">Pro Se Law Clerk - Columbia/Greenville</a><br>
+	<a class="menulink" href="https://www.scd.uscourts.gov/vacancies/26_10_Term_Law_Clerk_Greenville.pdf" style="font-size:8px; font-weight:normal">Term Law Clerk - Greenville</a><br>
+
+
+
+</div>	
+
+
+			</div>
+			<!-- end #sidebar1 -->
+			<div id="mainContent" style=" position:relative;min-height:300px;height:auto !important;height:300px;">
+				<!-- InstanceBeginEditable name="Page Content" -->
+                                        <h1 class="USDC_Head">Grand Juror Handbook<a name="top" id="top"></a></h1>
+<table cellpadding="5">
+<tr><td>										
+                                        <table  cellpadding="5" cellspacing="0" width="100%" align="center">
+                                          <tr>
+                                            <td width="51%" valign="top" style="border: 1px solid;  border-color: darkgray;"><ul>
+                                                <li><a href="#glossary">Glossary of Terms</a></li>
+                                              <li><a href="#nature">Nature of the Grand Jury</a></li>
+                                              <li><a href="#tasks"> Grand Jury's Tasks</a></li>
+                                              <li><a href="#investigation"> Investigation</a></li>
+                                              <li><a href="#organization">Organization, Oath, and Officers of 
+                                                the Federal Grand Jury</a></li>
+                                              <li><a href="#origin">Origin and History of the Grand Jury</a></li>
+                                              <li><a href="#practical">Practical Suggestions for Grand Jurors</a></li>
+                                              <li><a href="#procedure">Procedure</a></li>
+                                              <li><a href="#calling">Calling the Person Under Investigation 
+                                                as a Witness</a></li>
+                                              <li><a href="#deliberations">Deliberations</a></li>
+                                              <li><a href="#evidence">Evidence Before the Grand Jury</a></li>
+                                              <li><a href="#truebill">Evidence Needed Before a &quot;True Bill&quot; 
+                                                May Be Voted</a></li>
+                                              <li><a href="#questioning">Questioning the Witness</a></li>
+                                              <li><a href="#quorum">Quorum</a></li>
+                                              <li><a href="#protection">Protection of Grand Jurors</a></li>
+                                              <li><a href="#purpose">Purpose of This Handbook</a></li>
+                                              <li><a href="#secrecy">Secrecy</a></li>
+                                              <li><a href="#selection">Selection of Grand Jurors</a></li>
+                                            </ul></td>
+                                          </tr>
+      </table>
+                                        <p align="justify">Prepared for the use of grand jurors serving in the United States district courts under the supervision of the Judicial Conference of the United States. Published by the Administrative Office of the United States Courts, Washington, D.C. 20544.</p>
+                                        <p align="justify">This handbook can also be viewed and printed as an Adobe PDF document. <a href="/Docs/gjhandbook.pdf">Click here for the Adobe PDF version of this handbook</a>.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <p align="center" class="USDC_Head"><a name="purpose" id="purpose" style="text-decoration: none"></a></p>
+                                        <h2>Purpose of This Handbook</h2>
+                                        <p align="justify">This Handbook will acquaint persons who have been selected to serve on a federal grand jury with the general nature and importance of their role as grand jurors. It explains some of the terms that grand jurors will encounter during their service and offers some suggestions helpful to them in performing this important public service. It is intended that this Handbook will, to a degree, repeat and provide a permanent record of much of the information presented in the grand jury orientation film, The People's Panel, which in most districts is shown to grand jurors at the commencement of their service. Grand jurors are encouraged to refer to this Handbook periodically throughout their service to reacquaint themselves with their duties and responsibilities.</p>
+                                        <p align="justify">This Handbook is designed as an aid only to persons serving on a federal - not a state -grand jury. The federal grand jury is concerned only with federal crimes; it derives its authority from the Constitution of the United States, national laws, and the rules of the federal courts. There are also grand juries impaneled in many of the states, but those grand juries investigate only state crimes; they derive their authority from the constitutions, laws, and rules of court of the states where they are impaneled.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="origin" id="origin" style="text-decoration: none"></a>
+                                        <h2>Origin and History of the Grand Jury</h2>
+                                        <p align="justify">The grand jury has a long and honorable tradition. It was recognized in the Magna Carta, the first English constitutional document, which King John granted in 1215 at the demand of his subjects. The first English grand jury consisted of twelve men selected from the knights or other freemen, who were summoned to inquire into crimes alleged to have been committed in their local community. Thus, grand jurors originally functioned as accusers or witnesses, rather than as judges.</p>
+                                        <p align="justify">Over the years, the hallmarks of our modern grand jury developed in England. For example, grand jury proceedings became secret, and the grand jury became independent of the Crown. As a result, a grand jury is able to vote an indictment or refuse to do so, as it deems proper, without regard to the recommendations of judge, prosecutor, or any other person. This independence from the will of the government was achieved only after a long hard fight. It can best be illustrated by the celebrated English case involving the Earl of Shaftasbury, who, in 1681, fell under the suspicion of the Crown. Displeased with him, the Crown presented to the grand jury a proposed bill of indictment for high treason and recommended that it be voted and returned. After hearing the witnesses, the grand jury voted against the bill of indictment and returned it to the King, holding that it was not true.</p>
+                                        <p align="justify">When the English colonists came to America, they brought with them many of the institutions of the English legal system, including the grand jury. Thus, the English tradition of the grand jury was well established in the American colonies long before the American Revolution. Indeed, the colonists used it as a platform from which to assert their independence from the pressures of colonial governors. In 1735, for example, the Colonial Governor of New York demanded that a grand jury indict for libel John Zenger, editor of a newspaper called &quot;The Weekly Journal,&quot; because he had held up to scorn certain acts of the Royal Governor. The grand jury flatly refused.</p>
+                                        <p align="justify">The grand jury as an institution was so firmly established in the traditions of our forebears that they included it in the Bill of Rights. The Fifth Amendment to the Constitution of the United States provides in part that &quot;(n)o person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury . . . .&quot; Moreover, the grand jury system is also recognized in the constitutions of many of the states of the Union.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="nature" id="nature" style="text-decoration: none"></a>
+                                        <h2>Nature of the Grand Jury</h2>
+                                        <p align="justify">The powers and functions of the federal grand jury differ from those of the federal trial jury, which is called the petit jury. The petit jury listens to the evidence offered by the prosecution and the defense (if it chooses to offer any) during a criminal trial and returns a verdict of guilty or not guilty. The grand jury, on the other hand, does not determine guilt or innocence, but only whether there is probable cause to believe that a crime was committed and that a specific person or persons committed it. If the grand jury finds probable cause to exist, then it will return a written statement of the charges called an &quot;indictment.&quot; After that, the accused will go to trial.</p>
+                                        <p align="justify">The grand jury normally hears only that evidence presented by an attorney for the government which tends to show the commission of a crime. The grand jury must determine from this evidence, and usually without hearing evidence for the defense, whether a person should be tried for a serious federal crime, referred to in the Bill of Rights as an &quot;infamous crime.&quot; An infamous crime is one which may be punished by imprisonment for more than one year. As a general rule, no one can be prosecuted for a serious crime unless the grand jury decides that the evidence it has heard so requires. In this way, the grand jury operates both as a &quot;sword,&quot; authorizing the government's prosecution of suspected criminals, and also as a &quot;shield,&quot; protecting citizens from unwarranted or inappropriate prosecutions. A person may, however, waive grand jury proceedings and agree to be prosecuted by a written charge of crime called an information.</p>
+                                        <p align="justify">The grand jury is not completely free to compel a trial of anyone it chooses. The United States Attorney must sign the indictment before one may be prosecuted. Thus, the government and the grand jury act as checks upon each other. This assures that neither may arbitrarily wield the awesome power to indict a person of a crime.</p>
+                                        <a name="tasks" id="tasks" style="text-decoration: none"></a>
+                                        <h5>(1) The Grand Jury's Tasks</h5>
+                                        <p align="justify">As stated above, the federal grand jury's function is to determine whether a person shall be tried for a serious federal crime alleged to have been committed within the district where it sits. Matters may be brought to its attention in three ways: (1) by the United States Attorney or an Assistant United States Attorney; (2) by the court that impaneled it; and (3) from the personal knowledge of a member of the grand jury or from matters properly brought to a member's personal attention. In all these cases, the grand jury must hear evidence before taking action.</p>
+                                        <p align="justify">After it has received evidence against a person, the grand jury must decide whether the evidence presented justifies an indictment, or &quot;true bill,&quot; which is the formal criminal charge returned by the grand jury. Upon the indictment's being filed in court, the person accused must either plead guilty or nolo contendere or stand trial.</p>
+                                        <p align="justify">If the evidence does not persuade the grand jury that there is probable cause to believe the person committed a crime, the grand jury will vote a &quot;no bill,&quot; or &quot;not a true bill.&quot; When this occurs, the person is not required to plead to a criminal charge, and no trial is required.</p>
+                                        <a name="investigation" id="investigation" style="text-decoration: none"></a>
+                                        <h5>(2) Investigation</h5>
+                                        <p align="justify">The major portion of the grand jury's work is concerned with evidence brought to its attention by an attorney for the government. The grand jury may consider additional matters otherwise brought to its attention, but should consult with the United States Attorney or the court before undertaking a formal investigation of such matters. This is necessary because the grand jury has no investigative staff, and legal assistance will be necessary in the event an indictment is voted.</p>
+                                        <p align="justify">It should be borne in mind that a federal grand jury can take action only upon federal crimes that have been committed within the district in which it has been impaneled. Furthermore, a federal grand jury (except a special grand jury impaneled under 18 U.S.C. &sect;&sect; 3331-3334) is not authorized to investigate situations involving the conduct of individuals, public officials, agencies or institutions that the grand jury believes is subject to mere criticism rather than a violation of federal criminal statutes. Its concern must be devoted solely to ascertaining whether there is probable cause to believe that a federal crime has been committed and to report accordingly to the court.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <p><a name="selection" id="selection" style="text-decoration: none"></a></p>
+                                        <h2>Selection of Grand Jurors</h2>
+                                        <p align="justify">Federal law requires that a grand jury be selected at random from a fair cross section of the community in the district or division in which the federal grand jury convenes. Thus, all citizens have an equal opportunity and obligation to serve.</p>
+                                        <p align="justify">Pursuant to law, the names of prospective grand jurors are drawn at random from lists of registered voters or lists of actual voters, or other sources when necessary, under procedures designed to ensure that all groups in the community will have a fair chance to serve. Those persons whose names have been drawn and who are not exempt or excused from service are summoned to appear for duty as grand jurors. When these persons appear before the court, the presiding judge may consider any further requests to be excused. The judge will then direct the selection of 23 qualified persons to become the members of the grand jury.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="organization" id="organization" style="text-decoration: none"></a>
+                                        <h2>Organization, Oath, and Officers of the Federal Grand Jury</h2>
+                                        <p align="justify">After the proper number of persons have been qualified as grand jurors, the court will appoint one of them to be the foreperson, or presiding officer, of the grand jury. A deputy foreperson will also be appointed, so that he or she can act as presiding officer in the foreperson's absence.</p>
+                                        <p align="justify">The foreperson, the deputy foreperson, and the remaining members of the grand jury are sworn in by the Clerk of the Court. Those persons who do not wish to swear may affirm.</p>
+                                        <p align="justify">The oath taken by the grand jurors binds them to inquire diligently and objectively into all federal crimes committed within the district of which they have or may obtain evidence and to conduct such inquiry without malice, fear, hatred, or other emotion.</p>
+                                        <p align="justify">After the grand jurors have been sworn, the presiding judge advises the grand jury of its obligations and how best to perform its duties. This is called the charge to the grand jury. Careful attention must be paid to the charge, for it and any additional instructions that may be given by the court contain the rules and directions the grand jury must follow during its term of service.</p>
+                                        <p align="justify">After the grand jury has been charged, it is taken to the grand jury room, where it will hear testimony and consider documentary evidence in the cases brought to its attention by the United States Attorney or an Assistant United States Attorney.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="procedure" id="procedure" style="text-decoration: none"></a>
+                                        <h2>Procedure</h2>
+                                        <a name="quorum" id="quorum" style="text-decoration: none"></a>
+                                        <h5>(1) Quorum</h5>
+                                        <p align="justify">Sixteen of the 23 members of the grand jury constitute a quorum for the transaction of business. If fewer than this number are present, even for a moment, the proceedings of the grand jury must stop. This shows how important it is that each grand juror conscientiously attend the meetings. If an emergency will prevent a grand juror's attendance at the meeting, he or she must promptly advise the grand jury foreperson. If the juror's absence will prevent the grand jury from acting, the grand juror should, if at all possible, attend the meeting.</p>
+                                        <p><a name="Evidence" id="Evidence"></a></p>
+                                        <h5>(2) Evidence Before the Grand Jury</h5>
+                                        <p align="justify">Much of the grand jury's time is spent hearing testimony by witnesses and examining documentary or other evidence in order to determine whether such evidence justifies an indictment.</p>
+                                        <p align="justify">Each federal court district has a United States Attorney whose duty it is to represent the United States in federal matters within the district and to prosecute those accused of federal crimes. In the usual case, the United States Attorney or one of the Assistant United States Attorneys will present the evidence of alleged violations of the law to the grand jury. These attorneys also advise grand jurors as to what witnesses should be called and what documentary evidence should be produced for examination by the grand jury. The grand jury may ask that additional witnesses be called if it believes this necessary. The United States Attorney will also prepare the formal written indictments that the grand jury wishes to present. But neither the United States Attorney nor any Assistant United States Attorney may remain in the room while the grand jury deliberates and votes on an indictment.</p>
+                                        <a name="Questioning" id="Questioning"></a>
+                                        <h5>(3) Questioning the Witness</h5>
+                                        <p align="justify">Witnesses are called to testify one after another. Upon appearing to give testimony, each witness will be sworn by the grand jury foreperson or, in the foreperson's absence, the deputy foreperson. The witness will then be questioned. Ordinarily, the attorney for the government questions the witness first, followed next by the foreperson of the grand jury. Then, the other members of the grand jury may question the witness.</p>
+                                        <p align="justify">All questions asked of each witness must be relevant and proper, relating only to the case under investigation. If doubt should arise as to whether a question is appropriate, the advice of the United States Attorney may be sought. If necessary, a ruling may be obtained from the court.</p>
+                                        <p align="justify">Because of the need for secrecy, described in more detail in the following section, the law forbids anyone other than authorized persons from being present in the grand jury room while evidence is being presented. This means that only the grand jury, the United States Attorney or the Assistant United States Attorney, the witness under examination, the court reporter, and the interpreter (if the foreperson determines one is required) may be present. If an indictment should ultimately be voted, the presence of unauthorized persons in the grand jury room could invalidate it.</p>
+                                        <p align="justify">Occasionally, prior to answering a question, a witness may ask to leave the grand jury room to consult with his or her attorney. The grand jury is to draw no adverse inference from such conduct, for every witness has the right to confer with counsel even though counsel may not be present in the grand jury room. In fact, a witness may confer with counsel after each question, as long as he or she does not make a mockery of the proceedings or does not, by such, make an attempt to impede the orderly progress of the grand jury investigation.</p>
+                                        <p align="justify">Additionally, a witness who is appearing before the grand jury may invoke the Fifth Amendment privilege against self-incrimination and refuse to answer a question. In such a situation, the grand jurors may bring the matter before the court in order to obtain a ruling as to whether or not the answer may be compelled. One manner in which an answer may be compelled is by granting the witness immunity from prosecution in exchange for the witness' testimony.</p>
+                                        <a name="Calling" id="Calling"></a>
+                                        <h5>(4) Calling the Person Under Investigation as a Witness</h5>
+                                        <p align="justify">Normally, neither the person under investigation (sometimes referred to as the &quot;accused,&quot; although this does not imply he or she is guilty of any crime) nor any witness on the accused's behalf will testify before the grand jury.</p>
+                                        <p align="justify">Upon request, preferably in writing, an accused may be given the opportunity by the grand jury to appear before it. An accused who does so appear cannot be forced to testify because of the constitutional privilege against self-incrimination. If the grand jury attempts to force the accused to testify, an indictment returned against that person may be nullified.</p>
+                                        <p align="justify">Because the appearance of an accused before the grand jury may raise complicated legal problems, a grand jury that desires to request or to permit an accused to appear before it should consult with the United States Attorney and, if necessary, the court before proceeding.</p>
+                                        <p align="justify">Even if the accused is willing to testify voluntarily, it is recommended that he or she first be warned of the right not to testify. Also, he or she may be required to sign a formal waiver of this right. The grand jury should be completely satisfied that the accused fully understands what he or she is doing.</p>
+                                        <a name="TrueBill" id="TrueBill"></a>
+                                        <h5>(5) The Evidence Needed Before a &quot;'True Bill&quot; May Be Voted</h5>
+                                        <p align="justify">It is the responsibility of the grand jury to weigh the evidence presented to it in order to determine whether this evidence, usually without any explanation being offered by the accused, persuades it that there is probable cause to believe that a crime has been committed and that the accused was the person who committed it. Remember that the grand jury is not responsible for determining whether the accused is guilty beyond a reasonable doubt, but only whether there is sufficient evidence of probable cause to justify bringing the accused to trial. Only the evidence presented to the grand jury in the grand jury room may be considered in determining whether to vote an indictment.</p>
+                                        <a name="Deliberations" id="Deliberations"></a>
+                                        <h5>(6) Deliberations</h5>
+                                        <p align="justify">When the grand jury has received all the evidence on a given charge, all persons other than the members of the grand jury must leave the room so that the grand jury may begin its deliberations. The presence of any other person in the grand jury room while the grand jury deliberates or votes may nullify an indictment returned on the accusation.</p>
+                                        <p align="justify">After all persons other than the grand jury members have left the room, the foreperson will ask the grand jury members to discuss and vote upon the question of whether the evidence persuades the grand jury that a crime has probably been committed by the person accused and that an indictment should be returned. Every grand juror has the right to express his or her view of the matter under consideration, and grand jurors should listen to the comments of all their fellow grand jurors before making up their mind. Only after each grand juror has been given the opportunity to be heard will the vote be taken. It should be remembered that at least 16 jurors must be present and 12 members must vote in favor of the indictment before it may be returned.</p>
+                                        <p align="justify">The foreperson of the grand jury must keep a record of the number of jurors concurring in the finding of every indictment and file the record with the Clerk of the Court. If an indictment is found, the grand jury will report it to the judge or a magistrate in open court. It will likewise report any &quot;not true bills,&quot; or decisions not to indict. A decision not to indict should immediately be reported to the court in writing by the foreperson so that the accused may promptly be released from jail or freed from bail.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="img" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <p><a name="secrecy" id="secrecy" style="text-decoration: none"></a></p>
+                                        <h2 align="left">Secrecy</h2>
+                                        <p align="justify">The law imposes upon each grand juror a strict obligation of secrecy. This obligation is emphasized in the oath each grand juror takes and in the charge given to the grand jury by the judge.</p>
+                                        <p align="justify">The tradition of secrecy continues as a vital part of the grand jury system for many reasons. It protects the grand jurors from being subjected to pressure by persons who may be subjects of investigations by the grand jury or associates of such persons. It prevents the escape of those against whom an indictment is being considered. It encourages witnesses before the grand jury to give full and truthful information as to the commission of a crime. It also prevents tampering with or intimidation of such witnesses before they testify at trial. Finally, it prevents the disclosure of investigations that result in no action by the grand jury and avoids any stigma the public might attach to one who is the subject of a mere investigation by the grand jury.</p>
+                                        <p align="justify">Essentially, the grand jury may disclose matters occurring before it only to the attorneys for the government for use in the performance of their duties, but even attorneys for the government may not be informed of what took place during the grand jury's deliberations and voting. The only other time matters occurring before the grand jury may be disclosed to anyone is when disclosure is ordered by the court in the interests of justice. Disclosure of such matters may never be made to grand juror's friends or family, including a grand juror's spouse.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="protection" id="protection" style="text-decoration: none"></a>
+                                        <h2>Protection of Grand Jurors</h2>
+                                        <p align="justify">The secrecy imposed upon grand jurors is a major source of protection for them. In addition, no inquiry may be made to learn what grand jurors said or how they voted, except upon order of the court.</p>
+                                        <p align="justify">The law gives the members of a grand jury broad immunity for actions taken by them within the scope of their authority as grand jurors.</p>
+                                        <p align="justify">Because of this immunity, all grand jurors must perform their duties with the highest sense of responsibility.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <a name="practical" id="practical" style="text-decoration: none"></a>
+                                        <h2>Practical Suggestions for Grand Jurors</h2>
+                                        <p align="justify">Each grand juror should attend the grand jury sessions regularly, in order to ensure that a quorum of 16 members will be present to conduct the grand jury's business.</p>
+                                        <p align="justify">Each grand juror should be on time for each meeting so that others are not kept waiting.</p>
+                                        <p align="justify">The time of meetings should be scheduled so as to be convenient for the grand jury, the United States Attorney, and the witnesses.</p>
+                                        <p align="justify">Witnesses should be treated courteously when they appear before the grand jury. Questions should be put to them in an orderly fashion. The United States Attorney should complete his or her questioning of each witness before the foreperson asks questions. The remaining grand jurors will then have a chance to ask relevant and proper questions.</p>
+                                        <p align="justify">Each grand juror has an equal voice in determining whether or not an indictment should be returned. Therefore, it is important that all grand jurors pay close attention to the testimony and other evidence presented.</p>
+                                        <p align="justify">Each grand juror must be absolutely fair in his or her judgment of the facts. Otherwise, the grand juror will defeat the democratic purpose the grand jury is designed to serve.</p>
+                                        <p align="justify">During deliberations on a case, each grand juror should feel free to express his or her opinion based upon the evidence.</p>
+                                        <p align="justify">Each juror has equal duties and responsibilities, and each is entitled to be satisfied with the evidence before being called upon to vote. No juror has the right to dismiss a witness or to shut off proper discussion if other jurors wish to pursue the matter further.</p>
+                                        <p align="justify">No grand jury should undertake to investigate matters outside its proper scope merely because someone suggested an investigation, or because the investigation would be interesting.</p>
+                                        <p align="justify">No grand juror should discuss the cases under investigation with anyone, except fellow grand jurors and the United States .Attorney or the Assistant United States Attorney, and then only in the grand jury room. Of course, the grand jurors may always seek the advice of the judge.</p>
+                                        <p align="justify">Finally, every citizen who is selected to serve on a federal grand jury should bring to this task the determination to participate in a responsible manner and to make every effort to ensure that the grand jury will be a credit not only to the community it represents but to the United States.</p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="arrow" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+                                        <p><a name="glossary" id="glossary" style="text-decoration: none"></a></p>
+                                        <h2>Glossary of Terms</h2>
+                                        <p><strong>Accused:</strong></p>
+
+                                        <p align="justify">The person accused of the commission of a federal crime. Use of this term does not imply the person under investigation is guilty of any crime. After a person is indicted by the grand jury, that person is referred to as the &quot;defendant.&quot;</p>
+                                        <p><strong>Charge to the Grand Jury:</strong></p>
+
+                                        <p align="justify">Given by the judge presiding over the selection and organization of the grand jury, the charge is the court's instructions to the grand jury as to its duties, functions, and obligations, and how to best perform them.</p>
+
+                                        <p><strong>Deliberations:</strong></p>
+
+                                        <p align="justify">The discussion by the grand jury members as to whether or not to return an indictment on a given charge against an accused. During deliberations no one except the grand jury members may be present.</p>
+                                        <p></p>
+                                        <p><strong>District:</strong></p>
+                                        
+                                        <p align="justify">The geographical area over which the federal district court where the grand jury sits and the grand jury itself have jurisdiction. The territorial limitations of the district will be explained to the grand jury by the district judge.</p>
+                                        
+                                        <p><strong>Evidence:</strong></p>
+                                        
+                                        <p align="justify">Testimony of witnesses, documents, and exhibits as presented to the grand jury by an attorney for the government or otherwise properly brought before it. In some instances, the person under investigation may also testify.</p>
+                                        
+                                        <p><strong>Federal:</strong></p>
+                                        
+                                        <p align="justify">The national government as distinguished from the state governments.</p>
+                                        
+                                        <p><strong>Grand Jurors' Immunity:</strong></p>
+                                        
+                                        <p align="justify">Immunity is granted to all grand jurors for their authorized actions while serving on a federal grand jury and means that no grand juror may be penalized for actions taken within the scope of his or her service as a grand juror.</p>
+                                        
+                                        <p><strong>Indictment:</strong></p>
+                                        
+                                        <p align="justify">The written formal charge of a crime by the grand jury, returned when 12 or more grand jurors vote in favor of it.</p>
+                                        
+                                        <p><strong>Information:</strong></p>
+                                        
+                                        <p align="justify">The written formal charge of crime by the United States Attorney, filed against an accused who, if charged with a serious crime, must have knowingly waived the requirements that the evidence first be presented to a grand jury.</p>
+                                        
+                                        <p><strong>&quot;No Bill&quot;:</strong></p>
+                                        
+                                        <p align="justify">Also referred to as &quot;not a true bill,&quot; the &quot;no bill&quot; is the decision by the grand jury not to indict a person.</p>
+                                        
+                                        <p><strong>Petit Jury:</strong></p>
+                                        
+                                        <p align="justify">The trial jury, composed of 12 members, that hears a case after indictment and renders a verdict or decision after hearing the prosecution's entire case and whatever evidence the defendant chooses to offer.</p>
+                                        
+                                        <p><strong>Probable Cause:</strong></p>
+                                        
+                                        <p align="justify">The finding necessary in order to return an indictment against a person accused of a federal crime. A finding of probable cause is proper only when the evidence presented to the grand jury, without any explanation being offered by the accused, persuades 12 or more grand jurors that a federal crime has probably been committed by the person accused.</p>
+                                        
+                                        <p><strong>Quorum for Grand Jury to Conduct Business:</strong></p>
+                                        
+                                        <p align="justify">Sixteen of the 23 members of a federal grand jury must at all times be present at a grand jury session in order for the grand jury to be able to conduct business.</p>
+                                        
+                                        <p><strong>United States Attorney:</strong></p>
+                                        
+                                        <p align="justify">The chief legal officer for the United States government in each federal district.                                        </p>
+                                        <p align="left"><a href="#top"><img src="/graphics/arrow_up.gif" alt="image" name="arrow_up" width="69" height="11" border="0" id="arrow_up" /></a></p>
+</td>
+</tr>
+</table>										
+    <!-- InstanceEndEditable --></div>
+			    <div id="footer">
+	<div align="center">
+				<span class="sidetext">
+				| <a href="/contact.asp">Contact Us</a> 
+                | <a href="/navtop/sitemap.asp">Site Map</a> 
+				| <a href="/compatibility.asp">Browser Compatibility</a>
+                | <a href="/disclaimer.asp">Disclaimer</a>
+                | <a href="/SiteSecurity.asp">Site Security</a>
+                |
+                </span> <!-- end #footer -->
+     </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53510309-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+			<br class="clearfloat" />
+		</div>
+		<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+		<script language="javascript" type="text/javascript" src="/js/awstats_misc_tracker.js" ></script>
+<noscript><img src="/js/awstats_misc_tracker.js?nojs=y" height="0" width="0" border="0" style="display: none"></noscript>
+	</body>
+
+<!-- InstanceEnd --></html>

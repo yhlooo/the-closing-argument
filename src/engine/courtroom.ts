@@ -224,6 +224,7 @@ export class CourtroomEngine {
       system: this.roleContext(work, role),
       prompt: `以下是按权限过滤的完整庭审记录：\n${JSON.stringify(this.visibleEvents(work, role))}\n你自己的私有主会话记录：\n${JSON.stringify((work.memories[role.id] ?? []).filter((m) => !["deliberation", "finished"].includes(work.state.phase) || m.task !== "ruling"))}\n本轮任务：${instruction}\n可询问的 target：${JSON.stringify(participants)}\n必须返回严格 JSON：${replyFormat(task)}`,
       hearing: {
+        caseId: this.bundle.case.id,
         admittedDefense: work.state.evidence.filter(
           (e) => e.admitted && e.side === "defense",
         ).length,

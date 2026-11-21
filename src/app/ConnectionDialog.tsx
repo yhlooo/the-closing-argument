@@ -1,5 +1,9 @@
 import { useState, type FormEvent } from "react";
-import type { Connection, Protocol } from "../llm/sdk";
+import {
+  validateConnection,
+  type Connection,
+  type Protocol,
+} from "../llm/connection";
 export const protocols: Record<Protocol, string> = {
   demo: "离线演示",
   "openai-chat": "OpenAI Chat Completions",
@@ -20,11 +24,15 @@ export function ConnectionDialog({
   async function save(e: FormEvent) {
     e.preventDefault();
     try {
-      if (draft.protocol !== "demo") {
-        const { validateConnection } = await import("../llm/sdk");
-        validateConnection(draft);
+      const config =
+        draft.protocol === "demo"
+          ? { ...draft, apiKey: "" }
+          : validateConnection(draft);
+      try {
+        onSave(config);
+      } catch {
+        setError("无法保存连接设置，请检查浏览器的本地存储权限。");
       }
-      onSave(draft);
     } catch {
       setError(
         "请填写模型、API Key 和正确的 HTTPS API 根地址；本地服务允许使用 HTTP。地址不能包含认证信息或查询参数。",
@@ -52,7 +60,7 @@ export function ConnectionDialog({
           ×
         </button>
         <span className="eyebrow">MODEL CONNECTION</span>
-        <h2 id="connection-title">模型连接</h2>
+        <h2 id="connection-title">API 连接设置</h2>
         <form onSubmit={save}>
           <label htmlFor="protocol">调用协议</label>
           <select
@@ -107,8 +115,9 @@ export function ConnectionDialog({
                 onChange={(e) => setDraft({ ...draft, apiKey: e.target.value })}
               />
               <div className="inline-note">
-                密钥仅保存在本页内存，会发送至你填写的服务地址。浏览器直连需要服务支持
-                CORS；Anthropic 还可能受组织策略限制。实际请求将产生服务费用。
+                API Key 将保存在此浏览器的本地存储中，调用时发送至所填 API
+                地址。浏览器直连需要服务支持 CORS；Anthropic
+                还可能受组织策略限制。实际请求将产生服务费用。
               </div>
             </>
           ) : (
@@ -117,7 +126,7 @@ export function ConnectionDialog({
             </p>
           )}
           <p className="fine-print">
-            设置从下一次调用开始生效。刷新后需要重新输入密钥。
+            设置从下一次调用开始生效。刷新后会自动恢复已保存的配置。
           </p>
           {error && (
             <p role="alert" className="field-error">

@@ -1,0 +1,43 @@
+schemaVersion: 1
+kind: case
+id: restoration-invoice
+title: 修复室的两张发票
+court: 白榆联邦地区法院 · 虚构法庭
+docket: 26-CR-0193
+defendant: 周宁 / Nora Zhou
+charge: 故意重复申领馆藏修复款（虚构罪名）
+background: |
+  市立美术馆的一幅壁画修复完成后，两张同额发票都获得了拨款。发票对应同一份委托书，其中一张盖有“补发”章。
+  周宁负责提交修复室的报销材料。第二笔款项已退回，谁知道第一笔已支付成为争议焦点。
+legalElements: [两笔款项针对同一修复项目, 被告提交第二次申请, 被告明知款项已支付仍意图重复领取]
+juryInstructions: 请逐项审查控方是否排除了合理怀疑。重复付款的结果与申请人的主观认识应分别判断。只考虑已采纳的材料。
+prosecutionOpening: 两张申请的经手人都是周宁。我们将提交付款回执，并传唤收件员说明第二张发票是怎样送到财务室的。
+defenseOpening: 大家都同意这笔钱付了两次。请留意补交手续发生时，周宁究竟收到过什么付款信息。
+prosecutionClosing: 第二张发票确实导致再次付款。请结合当时的通知和收件过程判断周宁是否明知。
+defenseClosing: 重复付款可以核对，知情却不能从两张同额发票直接推定。请把系统记录与当事人收到的信息区分开来。
+prosecutionEvidence:
+  - kind: exhibit
+    id: receipt-copy
+    title: E-01 · 双份付款回执
+    description: 两份回执相隔六日，金额均为 8,400 美元，经手人栏均为周宁，第一份回执的收件地址是财务公共邮箱。
+    purpose: 说明第一次付款早于补交发票。
+  - kind: witness
+    id: desk-clerk
+    title: W-01 · 收件员证言
+    description: 收件员 Ellis Park 经手了标记为补发的发票。
+    purpose: 证明第二份申请由周宁送交。
+    profile: {schemaVersion: 1, kind: role, id: witness-park, roleType: witness, name: Ellis Park, personality: 重视字面记录，记不清的细节会明说。, background: 在财务前台负责收件四年。, occupation: 收件员}
+    privateKnowledge: 周宁说按通知来补材料，你没有问她是否知道已经付款。
+    directExamination: [{question: 谁带来了第二份发票？, answer: 周宁交给了我，票面已经盖了补发章。}]
+    judgeExamination: [{question: 你亲自告知过她第一笔款项已到账吗？, answer: 没有。我当时只作收件登记。}]
+defenseEvidence:
+  - kind: exhibit
+    id: resubmit-notice
+    title: D-01 · 补件通知
+    description: 财务组要求修复室重新提交盖章发票的邮件，比第二次申请早一天。邮件没有写明是否已经付款。
+    purpose: 解释周宁再次交件的原因。
+  - kind: exhibit
+    id: return-slip
+    title: D-02 · 退款凭据
+    description: 修复室在月末对账当日退还 8,400 美元。转账附言写有“重复到账”。
+    purpose: 显示修复室发现重复付款后采取的行动，请结合其他材料判断意图。

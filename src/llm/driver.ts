@@ -21,6 +21,7 @@ export interface RoleRequest {
   prompt: string;
   round: number;
   hearing?: {
+    caseId?: string;
     admittedDefense: number;
     admittedProsecution: number;
     question?: string;

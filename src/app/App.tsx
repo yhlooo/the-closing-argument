@@ -1,5 +1,13 @@
+import { Archives } from "./Archives";
 import { courtTurn, delay } from "./conductor";
-import { loadSave, writeSave, type Save } from "./storage";
+import {
+  readLibrary,
+  selectSave,
+  writeSave,
+  readConnection,
+  storeConnection,
+  type Save,
+} from "./storage";
 import { useEffect, useRef, useState } from "react";
 import { builtinBundle } from "../content/builtin";
 import { bundleSchema, type ContentBundle } from "../domain/profiles";
@@ -20,11 +28,19 @@ const initialConnection: Connection = {
   model: "",
   apiKey: "",
 };
+import { CaseLibrary } from "./CaseLibrary";
 import { ActionPanel } from "./ActionPanel";
 import { Creator } from "./Creator";
 import { Transcript } from "./Transcript";
 import { ConnectionDialog, protocols } from "./ConnectionDialog";
 import { download } from "./controls";
+const pages = {
+  home: "案件",
+  archives: "存档",
+  creator: "创作",
+} as const;
+type MenuPage = keyof typeof pages;
+type Page = MenuPage | "court";
 const phases = Object.keys(phaseLabels) as (keyof typeof phaseLabels)[];
 const seed = () => crypto.getRandomValues(new Uint32Array(1))[0];
 function Scales() {
@@ -62,7 +78,8 @@ export function App() {
   }
   const [connection, setConnection] = useState(initialConnection);
   const [activeConnection, setActiveConnection] = useState(initialConnection);
-  const [tab, setTab] = useState<"court" | "creator">("court");
+  const [returnPage, setReturnPage] = useState<"home" | "archives">("home");
+  const [tab, setTab] = useState<Page>("home");
   const [settings, setSettings] = useState(false);
   const [busy, setBusy] = useState(false),
     [progress, setProgress] = useState("");
@@ -83,7 +100,8 @@ export function App() {
   const [ready, setReady] = useState(false);
   const saved = useRef<Save | undefined>(undefined);
   const actionArea = useRef<HTMLElement>(null);
-  const [confirmNew, setConfirmNew] = useState(false);
+  const [archives, setArchives] = useState<Save[]>([]);
+  const [setupDraft, setSetupDraft] = useState<Connection>();
   const [evidenceId, setEvidenceId] = useState("");
   const [sandbox, setSandbox] = useState<CourtState>();
   const answerDefense = (question: string, signal: AbortSignal) =>
@@ -185,6 +203,7 @@ export function App() {
           const previous = saved.current;
           const next = {
             ...game,
+            updatedAt: Date.now(),
             revision: (previous?.revision ?? 0) + 1,
             snapshot,
           };
@@ -204,6 +223,7 @@ export function App() {
     return {
       id: crypto.randomUUID(),
       revision: 0,
+      updatedAt: Date.now(),
       seed: seed(),
       bundle: content,
       connection: publicConfig,
@@ -211,15 +231,35 @@ export function App() {
   }
   useEffect(() => {
     let mounted = true;
-    loadSave()
-      .then((game) => {
+    readLibrary()
+      .then(({ saves, current }) => {
+        const route = window.location.hash.slice(1);
+        const game = route.startsWith("trial/")
+          ? (saves.find((s) => s.id === route.slice(6)) ?? current)
+          : current;
         if (!mounted) return;
+        setArchives(saves);
         saved.current = game;
-        const config = game
-          ? { ...game.connection, apiKey: "" }
-          : initialConnection;
-        attach(game ?? freshGame(builtinBundle, config), config);
+        const stored = readConnection();
+        const config =
+          stored ??
+          (game ? { ...game.connection, apiKey: "" } : initialConnection);
+        if (game) attach(game, config);
+        if (game && (route === "trial" || route.startsWith("trial/"))) {
+          setReturnPage(
+            history.state?.returnPage === "home" ? "home" : "archives",
+          );
+          setTab("court");
+        } else if (route === "archives" || route === "creator") setTab(route);
         setConnection(config);
+        if (!stored) {
+          setSetupDraft(
+            config.protocol === "demo"
+              ? { ...config, protocol: "openai-chat" }
+              : config,
+          );
+          setSettings(true);
+        }
         setReady(true);
       })
       .catch(() =>
@@ -229,15 +269,61 @@ export function App() {
       mounted = false;
     };
   }, []);
-  async function newTrial() {
+  async function newTrial(content: ContentBundle) {
     await run(async () => {
-      const game = freshGame(bundleSchema.parse(draftBundle), connection);
-      await writeSave(game, saved.current);
+      const game = freshGame(bundleSchema.parse(content), connection);
+      await writeSave(game);
       saved.current = game;
       attach(game, connection);
       setEvidenceId("");
-      setTab("court");
-      setConfirmNew(false);
+      enterCourt("home");
+    });
+  }
+  function enterCourt(source: "home" | "archives") {
+    if (!saved.current) return;
+    setReturnPage(source);
+    setTab("court");
+    history.replaceState(
+      { returnPage: source },
+      "",
+      "#trial/" + saved.current.id,
+    );
+    window.scrollTo(0, 0);
+  }
+  function navigate(page: MenuPage) {
+    setTab(page);
+    history.replaceState(
+      null,
+      "",
+      location.pathname + location.search + (page === "home" ? "" : "#" + page),
+    );
+    window.scrollTo(0, 0);
+  }
+  useEffect(() => {
+    if (!ready || tab !== "archives") return;
+    let mounted = true;
+    readLibrary()
+      .then(({ saves }) => {
+        if (mounted) setArchives(saves);
+      })
+      .catch(() => {
+        if (mounted) setError("读取庭审列表失败，请重试。");
+      });
+    return () => {
+      mounted = false;
+    };
+  }, [ready, tab, state]);
+  async function resume(id: string) {
+    if (controller.current && saved.current?.id === id) {
+      enterCourt("archives");
+      return;
+    }
+    await run(async () => {
+      const game = await selectSave(id);
+      saved.current = game;
+      attach(game, connection);
+      setEvidenceId("");
+      enterCourt("archives");
     });
   }
   const play = async (action: (signal: AbortSignal) => Promise<unknown>) => {
@@ -279,7 +365,7 @@ export function App() {
       error ||
       tab !== "court" ||
       settings ||
-      confirmNew ||
+      !saved.current ||
       !automatic
     )
       return;
@@ -287,52 +373,95 @@ export function App() {
       await delay(280, signal);
       await automatic(engine.current, signal);
     });
-  }, [ready, busy, error, state, bundle, tab, settings, confirmNew]);
+  }, [ready, busy, error, state, bundle, tab, settings]);
   const showDesk = !!defenseQuestion || (!automatic && !state.result && !busy);
   return (
     <div className="app-shell">
       <header className="topbar">
-        <a
-          className="brand"
-          href="#"
-          onClick={(event) => {
-            event.preventDefault();
-            setTab("court");
-          }}
-        >
-          <span className="brand-icon">
-            <Scales />
-          </span>
-          <span>
-            <b>最后陈述</b>
-            <small>THE CLOSING ARGUMENT</small>
-          </span>
-        </a>
+        {tab === "court" ? (
+          <button className="return-link" onClick={() => navigate(returnPage)}>
+            <span aria-hidden="true">‹</span>{" "}
+            {returnPage === "archives" ? "返回存档" : "返回案件"}
+          </button>
+        ) : (
+          <a
+            className="brand"
+            href="#"
+            onClick={(event) => {
+              event.preventDefault();
+              navigate("home");
+            }}
+          >
+            <span className="brand-icon">
+              <Scales />
+            </span>
+            <span>
+              <b>最后陈述</b>
+              <small>THE CLOSING ARGUMENT</small>
+            </span>
+          </a>
+        )}
         <nav aria-label="主导航">
-          <button
-            className={tab === "court" ? "nav-active" : ""}
-            onClick={() => setTab("court")}
-          >
-            庭审现场
-          </button>
-          <button
-            className={tab === "creator" ? "nav-active" : ""}
-            onClick={() => setTab("creator")}
-          >
-            创作工作台
-          </button>
+          {(Object.keys(pages) as MenuPage[]).map((page) => (
+            <button
+              key={page}
+              className={tab === page ? "nav-active" : ""}
+              aria-current={tab === page ? "page" : undefined}
+              disabled={!ready}
+              onClick={() => navigate(page)}
+            >
+              {pages[page]}
+            </button>
+          ))}
         </nav>
         <button
           disabled={busy || !ready}
           className="connection-button"
-          onClick={() => setSettings(true)}
+          onClick={() => {
+            setSetupDraft(connection);
+            setSettings(true);
+          }}
         >
           <i className="status-dot" />
           {protocols[connection.protocol]}
           <span aria-hidden="true"> ⚙</span>
         </button>
       </header>
-      {tab === "court" ? (
+      {tab === "home" ? (
+        <>
+          {error && (
+            <p className="message error" role="alert">
+              {error}
+            </p>
+          )}
+          <CaseLibrary
+            disabled={busy || !ready}
+            custom={draftBundle}
+            choose={newTrial}
+          />
+        </>
+      ) : tab === "archives" ? (
+        <Archives
+          saves={archives}
+          currentId={saved.current?.id}
+          busy={busy || !ready}
+          error={error}
+          resume={resume}
+          choose={() => navigate("home")}
+        />
+      ) : tab === "court" && !saved.current ? (
+        <main className="case-library">
+          <h1>法庭</h1>
+          <p>尚未开庭。选择一个案件开始庭审。</p>
+          <button
+            className="button primary"
+            disabled={!ready}
+            onClick={() => navigate("home")}
+          >
+            选择案件
+          </button>
+        </main>
+      ) : tab === "court" ? (
         <main className="court-grid">
           <aside className="dossier">
             <section className="case-card">
@@ -401,13 +530,6 @@ export function App() {
               <summary>法庭指示</summary>
               <p>{bundle.case.juryInstructions}</p>
             </details>
-            <button
-              className="text-button"
-              disabled={busy || !ready}
-              onClick={() => setConfirmNew(true)}
-            >
-              重新开庭
-            </button>
           </aside>
           <div className="court-main">
             <section
@@ -444,6 +566,14 @@ export function App() {
                 ))}
               </ol>
               <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById(
+                      showDesk ? "current-action" : "transcript-end",
+                    )
+                    ?.scrollIntoView();
+                }}
                 className="jump"
                 href={showDesk ? "#current-action" : "#transcript-end"}
               >
@@ -532,6 +662,8 @@ export function App() {
                     key={`${saved.current?.id}-${state.phase}-${state.openings.length}-${state.closings.length}-${selected?.id}-${state.evidence.length}`}
                     state={state}
                     bundle={bundle}
+                    runId={saved.current!.id}
+                    legacyDrafts={saved.current!.legacyDrafts}
                     selected={selected}
                     busy={busy || !ready}
                     choose={setEvidenceId}
@@ -551,9 +683,9 @@ export function App() {
           <button
             className="studio-start button quiet"
             disabled={busy || !ready}
-            onClick={() => setConfirmNew(true)}
+            onClick={() => navigate("home")}
           >
-            用当前卷宗开庭
+            查看案件列表
           </button>
           <Creator
             bundle={draftBundle}
@@ -592,52 +724,16 @@ export function App() {
       </footer>
       {settings && (
         <ConnectionDialog
-          connection={connection}
+          connection={setupDraft ?? connection}
           onSave={(value) => {
-            void run(async () => {
-              const previous = saved.current;
-              const game = previous ?? freshGame(bundle, value);
-              const { apiKey: _secret, ...publicConfig } = value;
-              const next = {
-                ...game,
-                connection: publicConfig,
-                revision: game.revision + 1,
-              };
-              await writeSave(next, previous);
-              saved.current = next;
-              attach(next, value);
-              setConnection(value);
-              setSettings(false);
-            });
+            storeConnection(value);
+            if (saved.current) attach(saved.current, value);
+            setConnection(value);
+            setSettings(false);
+            setError("");
           }}
           onClose={() => setSettings(false)}
         />
-      )}
-      {confirmNew && (
-        <div className="modal-backdrop">
-          <section
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label="重新开庭"
-          >
-            <h2>用当前卷宗重新开庭？</h2>
-            <p>这会替换本浏览器的当前庭审存档。</p>
-            <button
-              disabled={busy}
-              className="button primary"
-              onClick={newTrial}
-            >
-              重新开庭
-            </button>{" "}
-            <button
-              className="button quiet"
-              onClick={() => setConfirmNew(false)}
-            >
-              继续本庭
-            </button>
-          </section>
-        </div>
       )}
       {tab === "creator" && defenseQuestion && (
         <div className="modal-backdrop">

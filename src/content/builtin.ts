@@ -12,3 +12,18 @@ export const builtinBundle = bundleSchema.parse({
   prosecutor: parseResource(prosecutorYaml),
   juryPool: parseResource(poolYaml),
 });
+
+export const caseLibrary = [
+  builtinBundle,
+  ...Object.values(
+    import.meta.glob<string>(
+      [
+        "../../profiles/cases/*/case.yaml",
+        "!../../profiles/cases/harbor/case.yaml",
+      ],
+      { eager: true, query: "?raw", import: "default" },
+    ),
+  ).map((source) =>
+    bundleSchema.parse({ ...builtinBundle, case: parseResource(source) }),
+  ),
+];

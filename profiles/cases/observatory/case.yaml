@@ -1,0 +1,43 @@
+schemaVersion: 1
+kind: case
+id: observatory-log
+title: 雨量站的空白一小时
+court: 松岭联邦地区法院 · 虚构法庭
+docket: 26-CR-0217
+defendant: 许川 / Rowan Xu
+charge: 故意隐去公共监测记录（虚构罪名）
+background: |
+  六月暴雨过后，山谷雨量站发布的日报缺少一小时读数。纸带留下了墨迹，公开数据表却显示为空白。
+  许川是当班校核员。他在交班前签署了日报，设备在同一时段报过故障。
+legalElements: [涉案日报属于公共监测记录, 被告有意使读数缺失, 被告明知相关读数应当发布]
+juryInstructions: 请分别判断资料缺失的原因、读数的有效性以及当班人员的认识。每项要件都须由控方排除合理怀疑地证明。
+prosecutionOpening: 纸带仍有读数，许川却签署了一份留白的日报。值班记录员会说明当晚的交接情况。
+defenseOpening: 请先问清楚，当仪器读数不可信时，值班员按规程该怎么填表。
+prosecutionClosing: 请综合签字日报与现场交接记录，判断空白是故意隐去有效读数，还是仪器故障后的处理。
+defenseClosing: 纸带上有墨迹，并不能证明仪器通过了复核。控方仍需解释，为什么按故障规程留白就是故意隐去记录。
+prosecutionEvidence:
+  - kind: exhibit
+    id: rainfall-strip
+    title: E-01 · 原始雨量纸带
+    description: 纸带在 20 时至 21 时之间留有连续标记；对应日报时段为空白，末页有许川签字。
+    purpose: 证明原始介质上存在记录，日报却没有呈现读数。
+  - kind: witness
+    id: shift-report
+    title: W-01 · 交班记录员
+    description: 值班记录员 Mira Vale 接收了当晚的签字日报。
+    purpose: 说明许川在交班时知道表中有一栏空白。
+    profile: {schemaVersion: 1, kind: role, id: witness-vale, roleType: witness, name: Mira Vale, personality: 仔细区分听到的话和自己的理解。, background: 负责监测站晚班交接。, occupation: 记录员}
+    privateKnowledge: 许川指着空栏说要等复核。你没有独立校验仪器。
+    directExamination: [{question: 交班时许川看过空栏吗？, answer: 他指着那一栏，说还要等复核。}]
+    judgeExamination: [{question: 你能独立确认当时的读数有效吗？, answer: 不能。我的职责是收取日报。}]
+defenseEvidence:
+  - kind: exhibit
+    id: fault-ticket
+    title: D-01 · 故障工单
+    description: 维修组在 19 时 52 分登记校准偏差，次日上午才完成修复。
+    purpose: 说明涉案时段的读数可能失真。
+  - kind: exhibit
+    id: field-manual
+    title: D-02 · 值班手册
+    description: 当季值班手册要求校准异常期间留空对应栏目，原件另存，待复核后补发。
+    purpose: 说明留白可能是依照当班规程处理。

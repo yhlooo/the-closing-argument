@@ -815,3 +815,92 @@ footer {
 .live-speech i {
   color: #668658;
 }
+.case-library {
+  max-width: 1440px;
+  margin: auto;
+  padding: clamp(26px, 5vw, 70px) 4vw;
+  min-height: 75vh;
+}
+.case-library h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin: 6px 0;
+}
+.case-library > header p {
+  color: var(--muted);
+}
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 20px;
+  margin-top: 26px;
+}
+.library-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+}
+.file-cover {
+  padding: 23px;
+  color: #fff9ed;
+  background: #244737;
+  min-height: 143px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.file-cover.harbor-ledger {
+  background:
+    linear-gradient(90deg, #19392dee, #19392d88),
+    url("/quayside.svg") center/cover;
+}
+.file-cover.restoration-invoice {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 23px, #d3bba522 23px 24px),
+    #65433a;
+}
+.file-cover.observatory-log {
+  background:
+    repeating-linear-gradient(115deg, transparent 0 11px, #acc5c31c 11px 12px),
+    #274858;
+}
+.file-cover h2 {
+  margin: 10px 0;
+}
+.file-cover small {
+  color: #ebe9da;
+}
+.library-body {
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.library-body dl {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+.library-body dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.library-body dd + dt {
+  margin-top: 8px;
+}
+.return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 650;
+  color: inherit;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+.return-link span {
+  font-size: 1.5rem;
+  line-height: 1;
+}

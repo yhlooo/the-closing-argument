@@ -4,6 +4,8 @@ import { phaseLabels, type CourtState, type Side } from "../domain/courtroom";
 import type { CourtroomEngine } from "../engine/courtroom";
 import { Tag } from "./controls";
 export function ActionPanel({
+  runId,
+  legacyDrafts,
   state,
   bundle,
   selected,
@@ -12,6 +14,8 @@ export function ActionPanel({
   run,
   engine,
 }: {
+  runId: string;
+  legacyDrafts?: boolean;
   state: CourtState;
   bundle: ContentBundle;
   selected?: EvidenceProfile;
@@ -30,7 +34,7 @@ export function ActionPanel({
         : phase === "defense"
           ? selected?.purpose
           : "请审查该材料的来源、真实性和证明范围。该材料能够证明的事实，与控方希望推断的结论应当区分。";
-  const draftKey = [
+  const legacyKey = [
     "court-draft",
     bundle.case.id,
     state.jurors.map((j) => j.name).join(","),
@@ -39,10 +43,28 @@ export function ActionPanel({
     state.closings.length,
     selected?.id,
   ].join("/");
+  const draftKey = [
+    "court-draft",
+    runId,
+    phase,
+    state.openings.length,
+    state.closings.length,
+    selected?.id,
+  ].join("/");
   const [value, setValue] = useState(
-    () => sessionStorage.getItem(draftKey) ?? defaults ?? "",
+    () =>
+      sessionStorage.getItem(draftKey) ??
+      (legacyDrafts ? sessionStorage.getItem(legacyKey) : null) ??
+      defaults ??
+      "",
   );
-  const [question, setQuestion] = useState("");
+  const [question, setQuestion] = useState(
+    () => sessionStorage.getItem(draftKey + "/question") ?? "",
+  );
+  function editQuestion(text: string) {
+    setQuestion(text);
+    sessionStorage.setItem(draftKey + "/question", text);
+  }
   const updateDraft = (text: string) => {
     setValue(text);
     sessionStorage.setItem(draftKey, text);
@@ -192,8 +214,8 @@ export function ActionPanel({
                     rows={3}
                     value={question}
                     maxLength={4000}
-                    placeholder="例如：你与搬运人相距多远？"
-                    onChange={(e) => setQuestion(e.target.value)}
+                    placeholder="写下你要向证人提出的问题"
+                    onChange={(e) => editQuestion(e.target.value)}
                   />
                   <button
                     className="button quiet full"
@@ -205,21 +227,21 @@ export function ActionPanel({
                         question,
                         s,
                       );
-                      setQuestion("");
+                      editQuestion("");
                     })}
                   >
                     提出问题
                   </button>
                   {(side === "defense"
                     ? selected.directExamination.map((qa) => qa.question)
-                    : ["你能亲自确认哪些事实？", "当时的距离和光线如何？"]
+                    : ["你能亲自确认哪些事实？", "哪些细节你无法确认？"]
                   ).map((q) => (
                     <button
                       type="button"
                       className="suggestion"
                       key={q}
                       disabled={busy}
-                      onClick={() => setQuestion(q)}
+                      onClick={() => editQuestion(q)}
                     >
                       {q}
                     </button>

@@ -26,7 +26,7 @@ export class DemoDriver implements LlmDriver {
         vote: guilty ? "guilty" : "not_guilty",
         speech: guilty
           ? "【演示投票】我暂时认为线索能够相互印证。"
-          : "【演示投票】身份和意图的证明仍有合理怀疑。",
+          : "【演示投票】对指控要件的证明仍有合理怀疑。",
       };
     }
     if (request.task === "challenge")
@@ -37,7 +37,7 @@ export class DemoDriver implements LlmDriver {
     if (request.task === "summary")
       return {
         speech:
-          "【演示汇总】陪审员围绕身份识别、记录的局限与证明责任交换意见。结果以系统统计的十二张票为准；这一演示采用预设投票，不代表模型推断。",
+          "【演示汇总】陪审员围绕已采纳材料、证言的局限与证明责任交换意见。结果以系统统计的十二张票为准；这一演示采用预设投票，不代表模型推断。",
       };
     if (request.role.roleType === "witness") {
       const q = request.hearing?.question ?? "";
@@ -60,6 +60,18 @@ export class DemoDriver implements LlmDriver {
           speech: "我看见有人搬箱子，但看不清箱内物品，也没能确认对方的身份。",
         };
       }
+      if (request.role.id === "witness-park")
+        return {
+          speech: /付|知道|通知/.test(q)
+            ? "我没有告诉周宁首笔款项已付。公共邮箱由财务人员轮流查看。"
+            : "我登记了周宁送来的补发发票。她说是按通知补材料。",
+        };
+      if (request.role.id === "witness-vale")
+        return {
+          speech: /校|读数|确认/.test(q)
+            ? "我没有校验设备，不能判断纸带上的数字是否可靠。"
+            : "交班时许川指着空白的那一栏，说还要等复核。",
+        };
       if (request.role.id === "witness-ortiz")
         return {
           speech: /工单|维护|安排/.test(q)
@@ -78,12 +90,30 @@ export class DemoDriver implements LlmDriver {
         speech:
           "【演示控方答复】请结合已经呈交的记录及其证明范围评估这一问题。",
       };
-    const comments = [
-      "门禁卡被使用，与确定持卡人的身份，仍是两件需要分别证明的事。",
-      "目击观察的距离、光线与记忆局限，都影响证言分量。",
-      "合法维护能够解释进入仓库的机会，但不能单独决定是否发生盗窃。",
-      "我关注每一个要件是否得到证明，而不是要求被告先证明无罪。",
-    ];
+    const comments =
+      request.hearing?.caseId === "restoration-invoice"
+        ? [
+            "同一份委托收到了两笔钱，但我们还得弄清经手人提交申请时知道什么。",
+            "公共邮箱的付款回执，能证明是谁读过它吗？",
+            "要判断意图，应当把补交材料的时间放回事情发生的顺序里。",
+          ]
+        : request.hearing?.caseId === "observatory-log"
+          ? [
+              "签署日报的人知道有空栏，与明知读数有效是两个问题。",
+              "纸带留下了墨迹，我想知道怎样确认那是有效读数。",
+              "记录员可以证明交班时说过什么，但没有校验仪器。",
+            ]
+          : request.hearing?.caseId === "harbor-ledger"
+            ? [
+                "门禁卡被使用，与确定持卡人的身份，仍是两件需要分别证明的事。",
+                "目击观察的距离、光线与记忆局限，都影响证言分量。",
+                "合法维护能够解释进入仓库的机会，但不能单独决定是否发生盗窃。",
+                "我关注每一个要件是否得到证明，而不是要求被告先证明无罪。",
+              ]
+            : [
+                "我关注控方是否对每个要件都给出了充分的证明。",
+                "材料的来源和它能证明的事实需要分别判断。",
+              ];
     return {
       speech: `【演示评议】${comments[(Number(request.role.id.split("-").at(-1)) - 1) % comments.length]}`,
     };

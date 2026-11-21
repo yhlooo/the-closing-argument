@@ -58,3 +58,43 @@ describe("内容与候选池", () => {
     expect(new Set(generateJury(pool, 5).map((j) => j.name)).size).toBe(12);
   });
 });
+
+it("案件首页的每份卷宗都能独立开庭并完成离线裁决", async () => {
+  const { caseLibrary } = await import("../src/content/builtin");
+  const { CourtroomEngine } = await import("../src/engine/courtroom");
+  const { courtTurn } = await import("../src/app/conductor");
+  const { DemoDriver } = await import("../src/llm/demo");
+  expect(new Set(caseLibrary.map((b) => b.case.id)).size).toBe(
+    caseLibrary.length,
+  );
+  expect(caseLibrary.length).toBeGreaterThan(1);
+  for (const bundle of caseLibrary) {
+    const engine = new CourtroomEngine(bundle, new DemoDriver(), { seed: 1 });
+    await engine.selectJury();
+    for (let i = 0; i < 60; i++) {
+      const state = engine.getState();
+      if (state.result) break;
+      const auto = courtTurn(state, bundle);
+      if (auto) await auto(engine, new AbortController().signal);
+      else if (state.phase === "openings")
+        await engine.recordOpening("defense", bundle.case.defenseOpening);
+      else if (state.phase === "closings")
+        await engine.recordClosing("defense", bundle.case.defenseClosing);
+      else {
+        const items =
+          state.phase === "defense"
+            ? bundle.case.defenseEvidence
+            : bundle.case.prosecutionEvidence;
+        const item = items.find(
+          (e) => !state.evidence.some((r) => r.id === e.id),
+        )!;
+        await engine.presentEvidence(
+          state.phase === "defense" ? "defense" : "prosecution",
+          item.id,
+          item.purpose,
+        );
+      }
+    }
+    expect(engine.getState().result).toBeDefined();
+  }
+});

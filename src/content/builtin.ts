@@ -2,9 +2,13 @@ import caseYaml from "../../profiles/cases/harbor/case.yaml?raw";
 import judgeYaml from "../../profiles/roles/judge.yaml?raw";
 import prosecutorYaml from "../../profiles/roles/prosecutor.yaml?raw";
 import poolYaml from "../../profiles/jury-pool.yaml?raw";
-import { bundleSchema, parseResource } from "../domain/profiles";
+import {
+  bundleSchema,
+  parseResource,
+  weightedJuryPoolSchema,
+} from "../domain/profiles";
 
-export const builtinBundle = bundleSchema.parse({
+const shared = bundleSchema.parse({
   schemaVersion: 1,
   kind: "bundle",
   case: parseResource(caseYaml),
@@ -13,17 +17,26 @@ export const builtinBundle = bundleSchema.parse({
   juryPool: parseResource(poolYaml),
 });
 
+export const builtinBundle = {
+  ...shared,
+  juryPool: weightedJuryPoolSchema.parse(shared.juryPool),
+};
+
 export const caseLibrary = [
   builtinBundle,
   ...Object.values(
     import.meta.glob<string>(
       [
         "../../profiles/cases/*/case.yaml",
+        "../../profiles/cases/*/bundle.yaml",
         "!../../profiles/cases/harbor/case.yaml",
       ],
       { eager: true, query: "?raw", import: "default" },
     ),
-  ).map((source) =>
-    bundleSchema.parse({ ...builtinBundle, case: parseResource(source) }),
-  ),
+  ).map((source) => {
+    const resource = parseResource(source);
+    return resource.kind === "bundle"
+      ? resource
+      : bundleSchema.parse({ ...builtinBundle, case: resource });
+  }),
 ];

@@ -904,3 +904,12 @@ footer {
   font-size: 1.5rem;
   line-height: 1;
 }
+
+.dossier-prose {
+  white-space: pre-line;
+  line-height: 1.75;
+}
+
+.file-cover.last-screening {
+  background: linear-gradient(115deg, #432732 46%, #795543 80%, #876953);
+}

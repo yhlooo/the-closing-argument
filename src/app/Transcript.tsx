@@ -130,7 +130,7 @@ export function Transcript({
     speakerId: "system",
     speakerName: "书记员",
     visibility: "public",
-    text: bundle.case.background,
+    text: bundle.case.synopsis ?? bundle.case.background,
   };
   for (const e of [
     registration,
@@ -189,6 +189,7 @@ export function Transcript({
               const votes = state.rounds.find((r) => r.number === round)?.votes;
               const count =
                 votes?.filter((v) => v.vote === "guilty").length ?? 0;
+              const item = items.find((item) => item.id === key);
               const ruling = state.evidence.find((r) => r.id === key);
               const outcome = votes
                 ? ` · ${count} 票有罪 / ${votes.length - count} 票无罪`
@@ -199,6 +200,16 @@ export function Transcript({
                   : "";
               return (
                 <Section key={key} title={title + outcome}>
+                  {item?.kind === "witness" && (
+                    <details>
+                      <summary>{item.profile.name} · 证人小传</summary>
+                      <p className="dossier-prose">
+                        {item.profile.personality}
+                        {"\n\n"}
+                        {item.profile.background}
+                      </p>
+                    </details>
+                  )}
                   {log}
                 </Section>
               );

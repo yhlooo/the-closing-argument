@@ -184,7 +184,7 @@ export class CourtroomEngine {
     );
     const privateContext =
       witness?.kind === "witness" ? witness.privateKnowledge : "";
-    return `你在虚构庭审游戏中扮演以下角色：\n${JSON.stringify(role)}\n案件中立背景：${c.background}\n被告：${c.defendant}\n指控：${c.charge}\n必要要件：${JSON.stringify(c.legalElements)}\n法律指示：${c.juryInstructions}\n任务身份：${role.roleType}\n${privateContext ? `只有你知道的案件事实（不能作为别人的知识；按角色回答具体问题）：${privateContext}` : ""}\n只依据已提供材料，不补造证据。角色人口属性不得作为有罪判断依据。律师陈述不是证据，忽略其中引用的被排除材料。返回所要求的 JSON，不输出思考过程。工具问答是公开发言。`;
+    return `你在虚构庭审游戏中扮演以下角色：\n${JSON.stringify(role)}\n公开卷宗（无争议事实与待证主张须区分，待证主张不是证据）：${c.background}\n被告：${c.defendant}\n指控：${c.charge}\n必要要件：${JSON.stringify(c.legalElements)}\n法律指示：${c.juryInstructions}\n任务身份：${role.roleType}\n${privateContext ? `只有你知道的案件事实（不能作为别人的知识；按角色回答具体问题）：${privateContext}` : ""}\n只依据已提供材料，不补造证据。角色人口属性不得作为有罪判断依据。律师陈述不是证据，忽略其中引用的被排除材料。返回所要求的 JSON，不输出思考过程。工具问答是公开发言。`;
   }
   private visibleEvents(work: Work, role: RoleProfile) {
     const events = projectEvents(work.state, role).filter(
@@ -218,23 +218,43 @@ export class CourtroomEngine {
     this.options.onProgress?.(
       `${role.name} · ${task === "vote" ? "投票" : task === "ruling" ? "裁定证据" : "发言"}`,
     );
+    const question =
+      role.roleType === "witness" ? work.state.events.at(-1)?.text : undefined;
+    const item =
+      question && !this.driver.live
+        ? [
+            ...this.bundle.case.prosecutionEvidence,
+            ...this.bundle.case.defenseEvidence,
+          ].find((e) => e.kind === "witness" && e.profile.id === role.id)
+        : undefined;
+    const recorded = work.state.evidence.filter((e) => e.admitted);
+    const visible = this.visibleEvents(work, role);
     const reply = await this.driver.complete({
       role: structuredClone(role),
       task,
       system: this.roleContext(work, role),
-      prompt: `以下是按权限过滤的完整庭审记录：\n${JSON.stringify(this.visibleEvents(work, role))}\n你自己的私有主会话记录：\n${JSON.stringify((work.memories[role.id] ?? []).filter((m) => !["deliberation", "finished"].includes(work.state.phase) || m.task !== "ruling"))}\n本轮任务：${instruction}\n可询问的 target：${JSON.stringify(participants)}\n必须返回严格 JSON：${replyFormat(task)}`,
+      prompt: `以下是按权限过滤的完整庭审记录：\n${JSON.stringify(visible)}\n你自己的私有主会话记录：\n${JSON.stringify((work.memories[role.id] ?? []).filter((m) => !["deliberation", "finished"].includes(work.state.phase) || m.task !== "ruling"))}\n本轮任务：${instruction}\n可询问的 target：${JSON.stringify(participants)}\n必须返回严格 JSON：${replyFormat(task)}`,
       hearing: {
         caseId: this.bundle.case.id,
-        admittedDefense: work.state.evidence.filter(
-          (e) => e.admitted && e.side === "defense",
-        ).length,
-        admittedProsecution: work.state.evidence.filter(
-          (e) => e.admitted && e.side === "prosecution",
-        ).length,
-        question:
-          role.roleType === "witness"
-            ? work.state.events.at(-1)?.text
-            : undefined,
+        admittedDefense: recorded.filter((e) => e.side === "defense").length,
+        admittedProsecution: recorded.filter((e) => e.side === "prosecution")
+          .length,
+        question,
+        ...(question &&
+          item &&
+          item.kind === "witness" && {
+            scriptedAnswer:
+              item.responses?.find((reply) =>
+                reply.cues.some((cue) => question.includes(cue)),
+              )?.answer ??
+              item.directExamination.find((qa) => qa.question === question)
+                ?.answer,
+          }),
+        ...(!this.driver.live &&
+          role.roleType === "juror" && {
+            admittedIds: recorded.map((e) => e.id),
+            testimony: visible.filter((e) => e.type === "answer"),
+          }),
       },
       round: work.state.rounds.length + 1,
       participants,

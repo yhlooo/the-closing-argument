@@ -483,13 +483,33 @@ export function App() {
                   <br />
                   控方 · {bundle.prosecutor.name}
                 </p>
-                <p>{bundle.case.background}</p>
+                <p className="dossier-prose">{bundle.case.background}</p>
                 <ol>
                   {bundle.case.legalElements.map((e) => (
                     <li key={e}>{e}</li>
                   ))}
                 </ol>
               </details>
+              {bundle.case.defendantBiography && (
+                <details>
+                  <summary>{bundle.case.defendant} · 被告</summary>
+                  <p className="dossier-prose">
+                    {bundle.case.defendantBiography}
+                  </p>
+                </details>
+              )}
+              {[bundle.judge, bundle.prosecutor].map((role) => (
+                <details key={role.id}>
+                  <summary>
+                    {role.name} · {role.occupation}
+                  </summary>
+                  <p className="dossier-prose">
+                    {role.personality}
+                    {"\n\n"}
+                    {role.background}
+                  </p>
+                </details>
+              ))}
             </section>
             <section className="jury-panel" tabIndex={0}>
               <div className="section-heading">
@@ -510,8 +530,10 @@ export function App() {
                         </small>
                       </span>
                     </summary>
-                    <p>
-                      {j.personality} {j.background}
+                    <p className="dossier-prose">
+                      {j.personality}
+                      {"\n\n"}
+                      {j.background}
                     </p>
                   </details>
                 ))

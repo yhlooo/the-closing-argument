@@ -34,6 +34,9 @@ export const evidenceSchema = z.discriminatedUnion("kind", [
         "必须为 witness 角色",
       ),
       privateKnowledge: text,
+      responses: z
+        .array(z.object({ cues: z.array(text).min(1), answer: text }).strict())
+        .optional(),
       directExamination: z.array(qa).min(1).max(30),
       judgeExamination: z.array(qa).max(30),
     })
@@ -49,6 +52,8 @@ export const caseSchema = z
     court: text,
     docket: text,
     defendant: text,
+    defendantBiography: text.optional(),
+    synopsis: text.optional(),
     charge: text,
     background: text,
     legalElements: z.array(text).min(1).max(20),
@@ -87,7 +92,7 @@ const bands = z
   )
   .min(1)
   .max(50);
-export const juryPoolSchema = z
+export const weightedJuryPoolSchema = z
   .object({
     schemaVersion: version,
     kind: z.literal("jury-pool"),
@@ -104,6 +109,28 @@ export const juryPoolSchema = z
     incomes: bands,
   })
   .strict();
+const portraitPoolSchema = z
+  .object({
+    schemaVersion: version,
+    kind: z.literal("jury-pool"),
+    portraits: z
+      .array(
+        roleSchema.refine((r) => r.roleType === "juror", "候选人必须为陪审员"),
+      )
+      .min(12)
+      .max(200)
+      .refine(
+        (people) =>
+          new Set(people.map((p) => p.id)).size === people.length &&
+          new Set(people.map((p) => p.name)).size === people.length,
+        "候选人姓名和 ID 必须唯一",
+      ),
+  })
+  .strict();
+export const juryPoolSchema = z.union([
+  weightedJuryPoolSchema,
+  portraitPoolSchema,
+]);
 export type JuryPool = z.infer<typeof juryPoolSchema>;
 export const bundleSchema = z
   .object({
@@ -197,7 +224,15 @@ export function generateJury(source: JuryPool, seed: number): RoleProfile[] {
   const pool = juryPoolSchema.parse(source),
     random = seededRandom(seed),
     names = new Set<string>();
-  const number = (values: JuryPool["ages"]) => {
+  if ("portraits" in pool) {
+    const candidates = [...pool.portraits];
+    return Array.from({ length: 12 }, (_, i) => {
+      const index = Math.floor(random() * candidates.length);
+      const [profile] = candidates.splice(index, 1);
+      return { ...profile, id: `juror-${i + 1}` };
+    });
+  }
+  const number = (values: typeof pool.ages) => {
     const band = pick(
       values.map((value) => ({ value, weight: value.weight })),
       random,

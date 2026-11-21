@@ -32,7 +32,13 @@ export function CaseLibrary({
                 <small>{item.court}</small>
               </header>
               <div className="library-body">
-                <p>{item.background}</p>
+                <p>{item.synopsis ?? item.background}</p>
+                {item.synopsis && (
+                  <details>
+                    <summary>阅读完整案情</summary>
+                    <p className="dossier-prose">{item.background}</p>
+                  </details>
+                )}
                 <dl>
                   <dt>被告</dt>
                   <dd>{item.defendant}</dd>

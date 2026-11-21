@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { text } from "../domain/profiles";
+import type { CourtEvent } from "../domain/courtroom";
 import type { RoleProfile } from "../domain/profiles";
 
 export type Task = "speak" | "challenge" | "ruling" | "vote" | "summary";
@@ -25,6 +26,9 @@ export interface RoleRequest {
     admittedDefense: number;
     admittedProsecution: number;
     question?: string;
+    scriptedAnswer?: string;
+    admittedIds?: string[];
+    testimony?: CourtEvent[];
   };
   onSpeech?: (body: string) => void;
   participants: string[];

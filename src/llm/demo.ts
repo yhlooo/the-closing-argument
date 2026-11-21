@@ -1,3 +1,4 @@
+import { screeningAssessment } from "./screening-demo";
 import type { LlmDriver, RoleRequest, Reply } from "./driver";
 import { throwIfAborted } from "./driver";
 
@@ -11,6 +12,11 @@ export class DemoDriver implements LlmDriver {
         speech:
           "【演示裁定】本项材料予以采纳。采纳仅表示允许考虑，不代表其内容已被证明；可信度与分量交由陪审团判断。",
       };
+    if (
+      request.hearing?.caseId === "last-screening" &&
+      request.role.roleType === "juror"
+    )
+      return screeningAssessment(request);
     if (request.task === "vote") {
       const seat = Number(request.role.id.split("-").at(-1));
       const defense = request.hearing?.admittedDefense ?? 2;
@@ -40,6 +46,8 @@ export class DemoDriver implements LlmDriver {
           "【演示汇总】陪审员围绕已采纳材料、证言的局限与证明责任交换意见。结果以系统统计的十二张票为准；这一演示采用预设投票，不代表模型推断。",
       };
     if (request.role.roleType === "witness") {
+      if (request.hearing?.scriptedAnswer)
+        return { speech: request.hearing.scriptedAnswer };
       const q = request.hearing?.question ?? "";
       if (request.role.id === "witness-reed") {
         if (/距|光|雨|灯|看清|脸|面部/.test(q))

@@ -1,0 +1,9 @@
+schemaVersion: 1
+kind: role
+id: prosecutor-cole
+roleType: prosecutor
+name: Adrian Cole
+personality: 逻辑直接，善于组织时间线。坚持控方论点，也承认材料中的局限。
+background: 专注财产犯罪的检察官，习惯通过记录与证言相互印证。
+occupation: 检察官
+age: 42

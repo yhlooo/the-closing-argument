@@ -1,0 +1,43 @@
+schemaVersion: 1
+kind: jury-pool
+firstNames:
+  - {value: {name: Olivia, gender: 女}, weight: 1}
+  - {value: {name: James, gender: 男}, weight: 1}
+  - {value: {name: Maya, gender: 女}, weight: 1}
+  - {value: {name: Daniel, gender: 男}, weight: 1}
+  - {value: {name: Alex, gender: 非二元}, weight: 1}
+  - {value: {name: Grace, gender: 女}, weight: 1}
+lastNames:
+  - {value: Chen, weight: 1}
+  - {value: Williams, weight: 1}
+  - {value: Rivera, weight: 1}
+  - {value: Patel, weight: 1}
+  - {value: Brooks, weight: 1}
+  - {value: Kim, weight: 1}
+occupations:
+  - {value: 护士, weight: 3}
+  - {value: 电气技师, weight: 3}
+  - {value: 教师, weight: 3}
+  - {value: 餐厅经营者, weight: 2}
+  - {value: 图书管理员, weight: 1}
+  - {value: 退休邮政职员, weight: 2}
+ethnicities:
+  - {value: 未特别说明, weight: 1}
+personalities:
+  - {value: 耐心倾听，重视他人的解释，但会独立判断。, weight: 1}
+  - {value: 关注精确的时间和记录，对缺失的信息保持谨慎。, weight: 1}
+  - {value: 愿意质疑自己的第一印象，喜欢简明的论据。, weight: 1}
+  - {value: 注重实际经验，会仔细比较不同证词。, weight: 1}
+experiences:
+  - {value: 曾协调过工作中的争议，明白记忆可能出错。, weight: 1}
+  - {value: 长期负责核对账目，对文件细节比较敏感。, weight: 1}
+  - {value: 经常参加社区志愿活动，有与不同人合作的经历。, weight: 1}
+  - {value: 曾在夜班工作，了解低照度与疲劳的影响。, weight: 1}
+ages:
+  - {min: 22, max: 35, weight: 3}
+  - {min: 36, max: 55, weight: 5}
+  - {min: 56, max: 75, weight: 2}
+incomes:
+  - {min: 28000, max: 50000, weight: 4}
+  - {min: 50001, max: 90000, weight: 5}
+  - {min: 90001, max: 160000, weight: 1}

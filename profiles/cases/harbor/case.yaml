@@ -1,0 +1,92 @@
+schemaVersion: 1
+kind: case
+id: harbor-ledger
+title: 午夜港口的账本
+court: 北港联邦地区法院 · 虚构法庭
+docket: 26-CR-0142
+defendant: 林安 / Alex Lin
+charge: 明知并故意盗取联邦仓库财产（虚构罪名）
+background: |
+  11 月 6 日夜间，北港联邦救灾仓库中价值 48,000 美元的十二台通信终端失踪。
+  林安是仓库的合同技术员，工作允许其接触仓库门禁和库存系统。
+  终端于次日早晨盘点时被发现缺失，尚未找回。案发当晚多名员工在仓库附近工作。
+legalElements:
+  - 涉案通信终端属于联邦仓库财产。
+  - 被告实际取走或协助取走这些终端。
+  - 被告明知没有授权，仍故意实施上述行为。
+juryInstructions: |
+  被告享有无罪推定。控方必须对每一个必要要件排除合理怀疑。
+  辩方没有证明无罪的一般责任。律师陈述不是证据。被排除的材料不得用于裁决。
+  证据获采纳并不意味着其内容一定可信；请独立评价证据的分量和证人可信度。
+  只有十二人一致才产生有罪或无罪裁决。不得为了达成一致而放弃诚实判断。
+prosecutionOpening: |
+  失窃时间段内，被告的门禁卡进入仓库；当班保安看到一名穿着相似外套的人搬运箱子。
+  我们将提交门禁记录和目击证言，请各位综合判断被告是否利用工作便利带走终端。
+defenseOpening: |
+  门禁记录只能证明一张卡被使用，不能直接证明谁持有它。
+  我们将检验证人的观察条件，并说明被告的工作任务。请始终关注控方是否证明了每一项要件。
+prosecutionClosing: 门禁与目击证言在时间上相互呼应。请结合已获采纳的材料，判断被告的身份和意图是否已获证明。
+defenseClosing: |
+  有机会接触仓库，不等于实施了盗窃。请逐一检查身份识别、授权情况和主观意图的证据。
+  只要任何必要要件仍存在合理怀疑，就应作出无罪裁决。
+prosecutionEvidence:
+  - kind: exhibit
+    id: access-log
+    title: E-01 · 夜间门禁记录
+    description: 系统导出的日志显示，编号 A-17 的门禁卡于 23:14 开门，23:22 离开。该卡登记在林安名下。日志没有影像或生物识别记录。
+    purpose: 由仓库管理员次日上午从系统导出。控方拟证明被告在失窃时间段进入仓库。
+  - kind: witness
+    id: guard-testimony
+    title: W-01 · 夜班保安证言
+    description: 夜班保安 Morgan Reed 在装卸区值班，称看到一人将箱子搬上货车。
+    purpose: 控方拟用其观察证明搬运人的身份与搬运时间。
+    profile:
+      schemaVersion: 1
+      kind: role
+      id: witness-reed
+      roleType: witness
+      name: Morgan Reed
+      personality: 努力表现可靠，但在追问下会承认记忆和视线的局限。不得捏造未观察到的事实。
+      background: 在仓库从事保安工作三年，当晚从晚间七点连续值班。
+      occupation: 夜班保安
+      age: 46
+    privateKnowledge: |
+      当晚下小雨，装卸区一盏灯损坏。你距离搬运人约三十米，只看到侧影，没有看清面部。
+      你根据深蓝外套联想到林安，但同款外套是仓库统一工装。你看不清箱内物品。
+      你告诉主管时说“可能是林安”，笔录中被缩写成“是林安”。被具体追问时应承认这些事实。
+    directExamination:
+      - question: 当晚你看到了什么？
+        answer: 大约十一点一刻，我看到有人穿着深蓝外套，把几个箱子搬到装卸区的货车上。
+      - question: 你认为那个人是谁？
+        answer: 我当时觉得可能是林安，他平时也穿那样的外套。
+    judgeExamination:
+      - question: 你的证言是否来自亲眼观察？
+        answer: 搬箱子的场景是我亲眼看到的，但身份判断包含我的推测。
+defenseEvidence:
+  - kind: exhibit
+    id: maintenance-order
+    title: D-01 · 系统维护工单
+    description: 主管于 11 月 6 日 18:40 发给林安的工单，要求当晚检查仓库网络设备。工单允许维护作业，但没有授权搬走通信终端。
+    purpose: 辩方从公司工单系统取得，拟说明夜间进入仓库可能有合法工作原因。工单本身不证明被告当晚实际行踪。
+  - kind: witness
+    id: dispatcher-testimony
+    title: W-02 · 调度员证言
+    description: 值班调度员 Dana Ortiz 负责登记仓库维护申请和夜间工单。
+    purpose: 说明林安在案发当晚有进入仓库维护设备的工作安排。
+    profile:
+      schemaVersion: 1
+      kind: role
+      id: witness-ortiz
+      roleType: witness
+      name: Dana Ortiz
+      personality: 以值班记录为依据，谨慎区分记得的事和推测。
+      background: 在北港做了六年设备调度。
+      occupation: 设备调度员
+      age: 39
+    privateKnowledge: 你在当晚亲自派发维护工单，但之后一直留在调度室，没有见到林安进入仓库或搬运设备。
+    directExamination:
+      - question: 当晚是谁安排了维护工作？
+        answer: 网络报警后，是我把主管签发的维护工单派给林安的。
+    judgeExamination:
+      - question: 你是否亲眼见过当晚的搬运过程？
+        answer: 没有。我的观察仅限于调度室内的派单过程。

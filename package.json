@@ -1,0 +1,32 @@
+{
+  "name": "the-closing-argument",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.107",
+    "@ai-sdk/openai": "^4.0.122",
+    "ai": "^7.0.178",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "prettier": "^3.10.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}

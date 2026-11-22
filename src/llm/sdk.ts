@@ -1,5 +1,4 @@
 import {
-  generateText,
   streamText,
   parsePartialJson,
   stepCountIs,
@@ -47,7 +46,7 @@ export class SdkDriver implements LlmDriver {
   async complete(request: RoleRequest) {
     const signal = AbortSignal.any([
       request.signal,
-      AbortSignal.timeout(120000),
+      AbortSignal.timeout(10 * 60 * 1000),
     ]);
     let calls = 0,
       toolError: unknown;
@@ -84,7 +83,7 @@ export class SdkDriver implements LlmDriver {
             }),
           }
         : undefined;
-    const options: Parameters<typeof generateText>[0] = {
+    const stream = streamText({
       model: this.model,
       system: request.system,
       prompt: request.prompt,
@@ -93,56 +92,52 @@ export class SdkDriver implements LlmDriver {
       prepareStep: ({ stepNumber }) =>
         stepNumber >= 4 ? { toolChoice: "none" as const } : {},
       maxRetries: 0,
-      maxOutputTokens: 2000,
       abortSignal: signal,
+      onError: () => {},
       providerOptions:
         this.config.protocol === "anthropic"
           ? {}
           : { openai: { store: false, parallelToolCalls: false } },
-    };
-    const result = request.onSpeech
-      ? await (async () => {
-          const stream = streamText(options);
-          let buffer = "";
-          for await (const chunk of stream.fullStream) {
-            if (chunk.type === "error") throw chunk.error;
-            if (chunk.type === "text-start") buffer = "";
-            if (chunk.type !== "text-delta") continue;
-            buffer += chunk.text;
-            const partial = await parsePartialJson(
-              buffer.trimStart().replace(/^```(?:json)?\s*/, ""),
-            );
-            const body = (partial.value as { speech?: unknown } | undefined)
-              ?.speech;
-            if (typeof body === "string") request.onSpeech!(body);
-          }
-          return {
-            text: await stream.text,
-            reasoningText: await stream.reasoningText,
-            steps: await stream.steps,
-            finishReason: await stream.finishReason,
-          };
-        })()
-      : await generateText(options);
+    });
+    let buffer = "";
+    let published = "";
+    for await (const chunk of stream.fullStream) {
+      throwIfAborted(signal);
+      if (chunk.type === "error") throw chunk.error;
+      if (chunk.type === "start-step") {
+        buffer = "";
+        published = "";
+      }
+      if (chunk.type !== "text-delta" || !request.onSpeech) continue;
+      buffer += chunk.text;
+      const partial = await parsePartialJson(
+        buffer.trimStart().replace(/^```(?:json)?\s*/, ""),
+      );
+      const body = (partial.value as { speech?: unknown } | undefined)?.speech;
+      if (typeof body === "string" && body && body !== published) {
+        throwIfAborted(signal);
+        request.onSpeech(body);
+        published = body;
+      }
+    }
     throwIfAborted(signal);
     if (toolError) throw toolError;
     if (
-      result.steps.some((step) =>
+      (await stream.steps).some((step) =>
         step.content.some((part) => part.type === "tool-error"),
       )
     )
       throw new Error("工具请求不合法或未完成");
+    const finishReason = await stream.finishReason;
     if (
-      result.finishReason === "length" ||
-      result.finishReason === "content-filter" ||
-      result.finishReason === "tool-calls"
+      ["length", "content-filter", "tool-calls", "error"].includes(finishReason)
     )
       throw new Error("模型未完成最终结果");
-    const source = result.text
+    const source = (await stream.text)
       .trim()
       .replace(/^```(?:json)?\s*\n?/, "")
       .replace(/\n?```$/, "");
     const reply = validateReply(request.task, JSON.parse(source));
-    return { ...reply, reasoning: result.reasoningText };
+    return { ...reply, reasoning: await stream.reasoningText };
   }
 }

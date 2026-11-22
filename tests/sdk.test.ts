@@ -7,91 +7,109 @@ const json = JSON.stringify({
   speech: "证据来源已经澄清，可以采纳。",
   admitted: true,
 });
-function response(protocol: Protocol, toolCall = false) {
-  if (protocol === "openai-chat")
-    return {
-      id: "chatcmpl-1",
-      object: "chat.completion",
-      created: 1,
-      model: "test-model",
-      choices: [
-        {
-          index: 0,
-          finish_reason: toolCall ? "tool_calls" : "stop",
-          message: toolCall
-            ? {
-                role: "assistant",
-                content: null,
-                tool_calls: [
-                  {
-                    id: "call-1",
-                    type: "function",
-                    function: {
-                      name: "ask_participant",
-                      arguments: JSON.stringify({
-                        target: "defense",
-                        question: "材料来自何处？",
-                      }),
-                    },
-                  },
-                ],
-              }
-            : { role: "assistant", content: json },
-        },
-      ],
-      usage: { prompt_tokens: 10, completion_tokens: 20, total_tokens: 30 },
-    };
-  if (protocol === "openai-responses")
-    return {
-      id: "resp-1",
-      object: "response",
-      created_at: 1,
-      model: "test-model",
-      status: "completed",
-      output: toolCall
-        ? [
+const sse = (event: unknown) => "data: " + JSON.stringify(event) + "\n\n";
+const eventsResponse = (body: BodyInit) =>
+  new Response(body, { headers: { "content-type": "text/event-stream" } });
+const argumentsJson = JSON.stringify({
+  target: "defense",
+  question: "材料来自何处？",
+});
+function chatChunk(delta: object, finishReason: string | null = null) {
+  return {
+    id: "chatcmpl-1",
+    object: "chat.completion.chunk",
+    created: 1,
+    model: "test-model",
+    choices: [{ index: 0, delta, finish_reason: finishReason }],
+  };
+}
+function response(protocol: Protocol, toolCall = false, speech = json) {
+  if (protocol === "openai-chat") {
+    const delta = toolCall
+      ? {
+          tool_calls: [
             {
-              id: "fc-1",
-              type: "function_call",
-              call_id: "call-1",
-              name: "ask_participant",
-              arguments: JSON.stringify({
-                target: "defense",
-                question: "材料来自何处？",
-              }),
-              status: "completed",
-            },
-          ]
-        : [
-            {
-              id: "msg-1",
-              type: "message",
-              role: "assistant",
-              status: "completed",
-              content: [{ type: "output_text", text: json, annotations: [] }],
+              index: 0,
+              id: "call-1",
+              type: "function",
+              function: { name: "ask_participant", arguments: argumentsJson },
             },
           ],
-      usage: { input_tokens: 10, output_tokens: 20, total_tokens: 30 },
-    };
-  return {
-    id: "msg-1",
-    type: "message",
-    role: "assistant",
-    model: "test-model",
-    stop_reason: toolCall ? "tool_use" : "end_turn",
-    stop_sequence: null,
-    content: toolCall
-      ? [
-          {
-            type: "tool_use",
-            id: "call-1",
-            name: "ask_participant",
-            input: { target: "defense", question: "材料来自何处？" },
-          },
-        ]
-      : [{ type: "text", text: json }],
-    usage: { input_tokens: 10, output_tokens: 20 },
-  };
+        }
+      : { content: speech };
+    return eventsResponse(
+      sse(chatChunk(delta)) +
+        sse(chatChunk({}, toolCall ? "tool_calls" : "stop")) +
+        "data: [DONE]\n\n",
+    );
+  }
+  if (protocol === "openai-responses") {
+    const item = toolCall
+      ? {
+          type: "function_call",
+          id: "fc-1",
+          call_id: "call-1",
+          name: "ask_participant",
+          arguments: argumentsJson,
+          status: "completed",
+        }
+      : { type: "message", id: "msg-1", role: "assistant", content: [] };
+    return eventsResponse(
+      [
+        { type: "response.output_item.added", output_index: 0, item },
+        toolCall
+          ? { type: "response.output_item.done", output_index: 0, item }
+          : {
+              type: "response.output_text.delta",
+              item_id: item.id,
+              delta: speech,
+            },
+        { type: "response.completed", response: {} },
+      ]
+        .map(sse)
+        .join(""),
+    );
+  }
+  return eventsResponse(
+    [
+      {
+        type: "message_start",
+        message: {
+          id: "msg-1",
+          model: "test-model",
+          usage: { input_tokens: 10, output_tokens: 0 },
+        },
+      },
+      {
+        type: "content_block_start",
+        index: 0,
+        content_block: toolCall
+          ? {
+              type: "tool_use",
+              id: "call-1",
+              name: "ask_participant",
+              input: {},
+            }
+          : { type: "text", text: "" },
+      },
+      {
+        type: "content_block_delta",
+        index: 0,
+        delta: toolCall
+          ? { type: "input_json_delta", partial_json: argumentsJson }
+          : { type: "text_delta", text: speech },
+      },
+      { type: "content_block_stop", index: 0 },
+      {
+        type: "message_delta",
+        delta: { stop_reason: toolCall ? "tool_use" : "end_turn" },
+        usage: { output_tokens: 20 },
+      },
+      { type: "message_stop" },
+    ]
+      .map(sse)
+      .join(""),
+  );
 }
 function request(): RoleRequest {
   return {
@@ -118,9 +136,7 @@ describe("真实 SDK 的协议边界（mock fetch，无真实密钥）", () => {
         seenUrl = String(input);
         headers = new Headers(init?.headers);
         body = JSON.parse(String(init?.body));
-        return new Response(JSON.stringify(response(protocol)), {
-          headers: { "content-type": "application/json" },
-        });
+        return response(protocol);
       };
       const driver = new SdkDriver(
         {
@@ -137,6 +153,7 @@ describe("真实 SDK 的协议边界（mock fetch，无真实密钥）", () => {
         `https://mock.example/v1/${protocol === "openai-chat" ? "chat/completions" : protocol === "openai-responses" ? "responses" : "messages"}`,
       );
       expect(body.model).toBe("test-model");
+      expect(body.stream).toBe(true);
       if (protocol === "anthropic") {
         expect(headers.get("x-api-key")).toBe("test-key");
         expect(headers.get("anthropic-dangerous-direct-browser-access")).toBe(
@@ -152,10 +169,7 @@ describe("真实 SDK 的协议边界（mock fetch，无真实密钥）", () => {
         questions: string[] = [];
       const mock: typeof fetch = async (_input, init) => {
         bodies.push(JSON.parse(String(init?.body)));
-        return new Response(
-          JSON.stringify(response(protocol, bodies.length === 1)),
-          { headers: { "content-type": "application/json" } },
-        );
+        return response(protocol, bodies.length === 1);
       };
       const driver = new SdkDriver(
         {
@@ -213,11 +227,6 @@ describe("真实 SDK 的协议边界（mock fetch，无真实密钥）", () => {
     expect(message).not.toContain("SECRET-KEY");
   });
   it("拒绝模型坏 JSON，不把解析失败当作采纳或演示结果", async () => {
-    const body = response("openai-chat");
-    const wire = JSON.stringify(body).replace(
-      json.replaceAll('"', '\\"'),
-      "bad-json",
-    );
     const driver = new SdkDriver(
       {
         protocol: "openai-chat",
@@ -225,8 +234,7 @@ describe("真实 SDK 的协议边界（mock fetch，无真实密钥）", () => {
         apiKey: "test-key",
         model: "model",
       },
-      async () =>
-        new Response(wire, { headers: { "content-type": "application/json" } }),
+      async () => response("openai-chat", false, "bad-json"),
     );
     await expect(driver.complete(request())).rejects.toThrow();
   });
@@ -257,24 +265,9 @@ it("接收最后一个数据块前已渲染公开正文，结构字段不进入�
     release = resolve;
   });
   let seen = "";
+  const encoder = new TextEncoder();
   const encode = (content: string, finish = false) =>
-    new TextEncoder().encode(
-      "data: " +
-        JSON.stringify({
-          id: "t",
-          object: "chat.completion.chunk",
-          created: 1,
-          model: "test",
-          choices: [
-            {
-              index: 0,
-              delta: { content },
-              finish_reason: finish ? "stop" : null,
-            },
-          ],
-        }) +
-        "\n\n",
-    );
+    encoder.encode(sse(chatChunk({ content }, finish ? "stop" : null)));
   const driver = new SdkDriver(
     {
       protocol: "openai-chat",
@@ -289,7 +282,7 @@ it("接收最后一个数据块前已渲染公开正文，结构字段不进入�
             c.enqueue(encode('{"speech":"证人'));
             await gate;
             c.enqueue(encode('已到庭","admitted":true}', true));
-            c.enqueue(new TextEncoder().encode("data: [DONE]\n\n"));
+            c.enqueue(encoder.encode("data: [DONE]\n\n"));
             c.close();
           },
         }),

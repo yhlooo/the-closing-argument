@@ -184,7 +184,7 @@ export class CourtroomEngine {
     );
     const privateContext =
       witness?.kind === "witness" ? witness.privateKnowledge : "";
-    return `你在虚构庭审游戏中扮演以下角色：\n${JSON.stringify(role)}\n公开卷宗（无争议事实与待证主张须区分，待证主张不是证据）：${c.background}\n被告：${c.defendant}\n指控：${c.charge}\n必要要件：${JSON.stringify(c.legalElements)}\n法律指示：${c.juryInstructions}\n任务身份：${role.roleType}\n${privateContext ? `只有你知道的案件事实（不能作为别人的知识；按角色回答具体问题）：${privateContext}` : ""}\n只依据已提供材料，不补造证据。角色人口属性不得作为有罪判断依据。律师陈述不是证据，忽略其中引用的被排除材料。返回所要求的 JSON，不输出思考过程。工具问答是公开发言。`;
+    return `你在虚构庭审游戏中扮演以下角色：\n${JSON.stringify(role)}\n公开卷宗（无争议事实与待证主张须区分，待证主张不是证据）：${c.background}\n被告：${c.defendant}\n指控：${c.charge}\n必要要件：${JSON.stringify(c.legalElements)}\n法律指示：${c.juryInstructions}\n任务身份：${role.roleType}\n${privateContext ? `只有你知道的案件事实（不能作为别人的知识；按角色回答具体问题）：${privateContext}` : ""}\n只依据已提供材料，不补造证据。角色人口属性不得作为有罪判断依据。律师陈述不是证据，忽略其中引用的被排除材料。角色性格、背景和私有会话仅用于扮演，不在公开发言或工具问答中披露。返回所要求的 JSON，不输出思考过程。工具问答是公开发言。`;
   }
   private visibleEvents(work: Work, role: RoleProfile) {
     const events = projectEvents(work.state, role).filter(

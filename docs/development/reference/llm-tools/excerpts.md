@@ -43,3 +43,7 @@ export type TextStreamTextDeltaPart = {
 ```
 
 来源为 npm 包 ai 的 src/generate-text/stream-text-result.ts。
+
+[AI SDK Core: streamText](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#fullstream)
+
+> A stream with all events, including text deltas, tool calls, tool results, and errors.

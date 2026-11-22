@@ -20,4 +20,4 @@
 
 ## 发言流
 
-所用 AI SDK 版本的 fullStream 区分文本增量、工具调用及其他事件。实现只拼接本次文本段的 text-delta，在 parsePartialJson 的局部结果中读取公开 speech。完整响应仍需通过角色任务的结构校验。测试使用分两次发送的 HTTP 事件流，在页面回调收到“证人”后才允许发送剩余字节，验证能在请求完成前显示正文。[SDK 源码摘录](../reference/llm-tools/excerpts.md)
+所用 AI SDK 版本的 fullStream 区分文本增量、工具调用及其他事件。实现只拼接当前模型步骤的 text-delta，在 parsePartialJson 的局部结果中读取公开 speech。完整响应仍需通过角色任务的结构校验。测试使用分两次发送的 HTTP 事件流，在页面回调收到“证人”后才允许发送剩余字节，验证能在请求完成前显示正文。三个协议使用模拟事件流验证请求的流式标志、认证、结构化结果及工具往返。[SDK 源码摘录](../reference/llm-tools/excerpts.md)

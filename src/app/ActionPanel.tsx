@@ -99,9 +99,7 @@ export function ActionPanel({
     return (
       <>
         <h2>选任陪审团</h2>
-        <p>
-          从候选人池抽取十二位陪审员。就席后可在左侧查看每位成员的职业、经历与性格。
-        </p>
+        <p>从候选人池抽取十二位陪审员。就席后可在陪审团名单查看成员资料。</p>
         <button
           className="button primary full"
           disabled={busy}

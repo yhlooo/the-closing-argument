@@ -43,6 +43,42 @@ type MenuPage = keyof typeof pages;
 type Page = MenuPage | "court";
 const phases = Object.keys(phaseLabels) as (keyof typeof phaseLabels)[];
 const seed = () => crypto.getRandomValues(new Uint32Array(1))[0];
+
+function CaseDetails({ dossier }: { dossier: ContentBundle["case"] }) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <button
+        className="button quiet full"
+        aria-haspopup="dialog"
+        onClick={() => dialog.current?.showModal()}
+      >
+        案情与证明要件
+      </button>
+      <dialog
+        ref={dialog}
+        className="modal case-details"
+        aria-labelledby="case-details-title"
+      >
+        <form method="dialog">
+          <button className="close-button" aria-label="关闭案情与证明要件">
+            ×
+          </button>
+        </form>
+        <h2 id="case-details-title">案情与证明要件</h2>
+        <h3>案情</h3>
+        <p className="dossier-prose">{dossier.background}</p>
+        <h3>证明要件</h3>
+        <ol>
+          {dossier.legalElements.map((element) => (
+            <li key={element}>{element}</li>
+          ))}
+        </ol>
+      </dialog>
+    </>
+  );
+}
+
 function Scales() {
   return (
     <svg
@@ -151,7 +187,6 @@ export function App() {
     }
   }
   function attach(game: Save, config: Connection) {
-    let streamed: CourtEvent | undefined;
     engine.current = new CourtroomEngine(
       game.bundle,
       {
@@ -169,31 +204,11 @@ export function App() {
         snapshot: game.snapshot,
         answerDefense,
         onProgress: setProgress,
-        onSpeech: (event) => {
-          streamed = event;
-          setSpeech(streamed);
-        },
+        onSpeech: setSpeech,
         onLine: async (event, signal) => {
-          const text = event.text;
-          const displayed =
-            streamed &&
-            (streamed.speakerId === event.speakerId ||
-              (event.speakerId === "prosecution" &&
-                streamed.speakerId === game.bundle.prosecutor.id)) &&
-            text.includes(streamed.text);
-          streamed = undefined;
           const reduced = window.matchMedia(
             "(prefers-reduced-motion: reduce)",
           ).matches;
-          if (!displayed && !reduced) {
-            for (let n = 5; n < text.length; n += 5) {
-              setSpeech({
-                ...event,
-                text: text.slice(0, n),
-              });
-              await delay(30, signal);
-            }
-          }
           setSpeech(event);
           await delay(reduced ? 20 : 340, signal);
           setStaged((lines) => [...lines, event]);
@@ -473,43 +488,14 @@ export function App() {
                 <dd>{bundle.case.title}</dd>
                 <dt>被告</dt>
                 <dd>{bundle.case.defendant}</dd>
+                <dt>法官</dt>
+                <dd>{bundle.judge.name}</dd>
+                <dt>检察官</dt>
+                <dd>{bundle.prosecutor.name}</dd>
                 <dt>指控</dt>
                 <dd>{bundle.case.charge}</dd>
               </dl>
-              <details>
-                <summary>案情与证明要件</summary>
-                <p>
-                  法官 · {bundle.judge.name}
-                  <br />
-                  控方 · {bundle.prosecutor.name}
-                </p>
-                <p className="dossier-prose">{bundle.case.background}</p>
-                <ol>
-                  {bundle.case.legalElements.map((e) => (
-                    <li key={e}>{e}</li>
-                  ))}
-                </ol>
-              </details>
-              {bundle.case.defendantBiography && (
-                <details>
-                  <summary>{bundle.case.defendant} · 被告</summary>
-                  <p className="dossier-prose">
-                    {bundle.case.defendantBiography}
-                  </p>
-                </details>
-              )}
-              {[bundle.judge, bundle.prosecutor].map((role) => (
-                <details key={role.id}>
-                  <summary>
-                    {role.name} · {role.occupation}
-                  </summary>
-                  <p className="dossier-prose">
-                    {role.personality}
-                    {"\n\n"}
-                    {role.background}
-                  </p>
-                </details>
-              ))}
+              <CaseDetails dossier={bundle.case} />
             </section>
             <section className="jury-panel" tabIndex={0}>
               <div className="section-heading">
@@ -518,24 +504,18 @@ export function App() {
               </div>
               {state.jurors.length ? (
                 state.jurors.map((j, i) => (
-                  <details key={j.id} className="juror">
-                    <summary>
-                      <span className="seat">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span>
-                        <b>{j.name}</b>
-                        <small>
-                          {j.occupation} · {j.age} 岁
-                        </small>
-                      </span>
-                    </summary>
-                    <p className="dossier-prose">
-                      {j.personality}
-                      {"\n\n"}
-                      {j.background}
-                    </p>
-                  </details>
+                  <div key={j.id} className="juror">
+                    <span className="seat">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>
+                      <b>{j.name}</b>
+                      <small>
+                        {j.occupation}
+                        {j.age !== undefined && ` · ${j.age} 岁`}
+                      </small>
+                    </span>
+                  </div>
                 ))
               ) : (
                 <>
@@ -614,7 +594,18 @@ export function App() {
                   download(
                     bundle.case.id + "-transcript.json",
                     JSON.stringify(
-                      { caseId: bundle.case.id, ...state },
+                      {
+                        caseId: bundle.case.id,
+                        ...state,
+                        jurors: state.jurors.map(
+                          ({ id, name, occupation, age }) => ({
+                            id,
+                            name,
+                            occupation,
+                            age,
+                          }),
+                        ),
+                      },
                       null,
                       2,
                     ),
